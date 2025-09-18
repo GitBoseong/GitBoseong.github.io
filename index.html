@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Boseong Kim | CV</title>
+	<meta name="description" content="Boseong Kim | Indoor Navigation · PDR · Sensor Fusion · Deep Learning" />
+	<style>
+		:root {
+			--bg: #0b0c10;
+			--fg: #e8eaee;
+			--muted: #a0a6b2;
+			--card: #11141a;
+			--line: #22262e;
+			--accent: #6ea8fe;
+		}
+
+		@media (prefers-color-scheme: light) {
+			:root {
+				--bg: #ffffff;
+				--fg: #151922;
+				--muted: #606776;
+				--card: #f6f7fa;
+				--line: #e7eaf1;
+				--accent: #0d6efd;
+			}
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+
+		html,
+		body {
+			margin: 0;
+			padding: 0;
+			background: var(--bg);
+			color: var(--fg);
+			font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", Arial, sans-serif;
+			line-height: 1.6;
+		}
+
+		a {
+			color: var(--accent);
+			text-decoration: none;
+		}
+
+		a:hover {
+			text-decoration: underline;
+		}
+
+		.wrap {
+			max-width: 900px;
+			margin: 0 auto;
+			padding: 32px 20px 80px;
+		}
+
+		header {
+			display: grid;
+			grid-template-columns: 1fr auto;
+			gap: 20px;
+			align-items: center;
+			margin-bottom: 32px;
+		}
+
+		.avatar {
+			width: 100px;
+			height: 100px;
+			border-radius: 20px;
+			background: var(--card);
+			display: grid;
+			place-items: center;
+			font-size: 48px;
+		}
+
+		h1 {
+			margin: 0;
+			font-size: clamp(24px, 4vw, 36px);
+			line-height: 1.2;
+		}
+
+		.muted {
+			color: var(--muted);
+		}
+
+		.tagline {
+			margin-top: 6px;
+		}
+
+		.links {
+			margin-top: 12px;
+			display: flex;
+			flex-wrap: wrap;
+			gap: 8px;
+		}
+
+		.btn {
+			padding: 6px 12px;
+			border-radius: 8px;
+			background: var(--card);
+			border: 1px solid var(--line);
+			color: var(--fg);
+		}
+
+		.btn:hover {
+			border-color: var(--accent);
+		}
+
+		section {
+			margin-bottom: 32px;
+		}
+
+		h2 {
+			font-size: 20px;
+			margin-bottom: 12px;
+		}
+
+		ul {
+			padding-left: 18px;
+			margin: 0;
+		}
+
+		li {
+			margin-bottom: 6px;
+		}
+
+		.pill {
+			display: inline-block;
+			padding: 4px 10px;
+			margin: 4px;
+			border: 1px solid var(--line);
+			border-radius: 999px;
+			font-size: 14px;
+			color: var(--muted);
+		}
+
+		footer {
+			text-align: center;
+			font-size: 14px;
+			color: var(--muted);
+			margin-top: 40px;
+		}
+
+		.avatar {
+			width: 300px;
+			height: 450px;
+			border-radius: 20px;
+			overflow: hidden;
+			background: var(--card);
+			display: grid;
+			place-items: center;
+		}
+
+		.avatar img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: bottom;
+			display: block;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrap">
+		<header>
+			<div>
+				<h1>Boseong Kim</h1>
+				<div class="tagline">Indoor Navigation · PDR · Sensor Fusion · Deep Learning</div>
+				<div class="links">
+					<a class="btn" href="mailto:bskim01@hallym.ac.kr">Email</a>
+					<a class="btn" href="https://github.com/GitBosung" target="_blank">GitHub</a>
+					<a class="btn" href="https://scholar.google.co.kr/citations?hl=ko&user=EO7yVY0AAAAJ"
+						target="_blank">Google Scholar</a>
+					<a class="btn" href="https://orcid.org/0009-0008-5259-859X" target="_blank">ORCID</a>
+				</div>
+			</div>
+			<div class="avatar">
+				<img src="images/profile.jpg" alt="Profile photo of Boseong Kim">
+			</div>
+		</header>
+
+		<section>
+			<h2>Profile</h2>
+			<p>
+				Undergraduate researcher at the School of Software, Hallym University. <br>
+				Conducting research on AI-based Pedestrian Dead Reckoning (PDR) using smartphone IMU sensors. <br>
+				Interested in indoor navigation, sensor fusion, and deep learning applications in mobile computing.
+			</p>
+		</section>
+
+		<section>
+			<h2>Research Areas</h2>
+			<div>
+				<span class="pill">Indoor Navigation</span>
+				<span class="pill">PDR</span>
+				<span class="pill">Deep Learning</span>
+			</div>
+		</section>
+
+		<section>
+			<h2>Education</h2>
+			<ul>
+				<li><strong>Division of Software, College of Information Science, Hallym University</strong> — B.S.
+					(2020–present)</li>
+			</ul>
+		</section>
+
+		<section>
+			<h2>Publications</h2>
+
+			<h3>International Journals (SCI)</h3>
+			<ul>
+				<li>
+					[J1] Shin, B., Li, S., & Kim, B. (2025).<br>
+					<em>Deep Learning-Based Vehicle Speed Estimation Using Smartphone Sensors in GNSS-Denied
+						Environment.</em><br>
+					<span>Applied Sciences, 15(16), 8824.</span><br>
+					<a href="https://doi.org/10.3390/app15168824" target="_blank"
+						rel="noreferrer">10.3390/app15168824</a>
+				</li>
+			</ul>
+
+			<h3>Domestic Journals (KCI)</h3>
+			<ul>
+				<li>
+					[K1] Kim, J., Kim, B., & Shin, B. (2025)<br>
+					<em>Performance Analysis and Compensation Methods According to PDR Drift and Radio Map
+						Resolution.</em><br>
+					<span>Journal of Positioning, Navigation, and Timing, 14(3), 195–202.</span><br>
+					<a href="https://doi.org/10.11003/JPNT.2025.14.3.195" target="_blank"
+						rel="noreferrer">10.11003/JPNT.2025.14.3.195</a>
+				</li>
+			</ul>
+
+			<h3>Conferences</h3>
+			<ul>
+				<li>
+					[C1] Kim, B., Shin, B. (2024).
+					<em>Enhancing Smartphone-Based Pedestrian Dead Reckoning Using AI in Various Motions.</em><br>
+					<span>Proceedings of the IPNT Conference, Nov 6–8, 2024, Jeju, Korea.</span><br>
+					<a href="https://ipnt.or.kr/2024proc/56?sfl=wr_name&stx=%EA%B9%80%EB%B3%B4%EC%84%B1&sop=and"
+						target="_blank" rel="noreferrer">IPNT 2024 Proceedings</a>
+				</li>
+				<li>
+					[C2] Li, S., Kim, B., Shin, B. (2025).
+					<em>A study on the estimation of vehicle speed using smartphone sensor data with AI
+						technology.</em><br>
+					<span>Proceedings of the KICS Conference, Feb 5–7, 2025, Yongpyong, Korea.</span><br>
+					<a href="https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE12132368" target="_blank"
+						rel="noreferrer">KICS 2025 Program</a>
+				</li>
+			</ul>
+		</section>
+
+		<section>
+			<h2>Projects</h2>
+			<ul>
+				<li>
+					<strong>Study on LSTM-based Step Detection for PDR in Various Motions</strong><br>
+					Designed an LSTM-based step detection method for pedestrian dead reckoning (PDR) under various
+					phone-carrying motions.<br>
+					📄 Published and orally presented at <em>IPNT 2024 Conference [C1]</em>.
+				</li>
+				<li>
+					<strong>Development of Low-Cost Navigation System at Hallym Univ. Engineering Building</strong><br>
+					Built a Wi-Fi radio map and developed next-generation navigation technology using SC-based
+					positioning.<br>
+					Completed field testing.<br>
+					🏅 Awarded <em>2nd Prize (Silver)</em> at the 2025-1 Hallym University SW Capstone Design
+					Competition.
+				</li>
+
+			</ul>
+		</section>
+
+		<section>
+			<h2>Skills</h2>
+			<div>
+				<span class="pill">Python</span>
+				<span class="pill">TensorFlow</span>
+				<span class="pill">PyTorch</span>
+				<span class="pill">Android</span>
+				<span class="pill">Git/GitHub</span>
+				<span class="pill">Linux</span>
+			</div>
+		</section>
+
+		<footer>
+			© <span id="year"></span> Boseong Kim · Hosted on GitHub Pages
+		</footer>
+	</div>
+
+	<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+
+</html>
