@@ -163,6 +163,139 @@
 				margin: 0 auto;
 			}
 		}
+
+		/* === Badge style ====== */
+		.badges {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 8px;
+			margin-top: 12px;
+		}
+
+		.badge {
+			display: inline-flex;
+			align-items: center;
+			gap: 8px;
+			height: 32px;
+			padding: 0 12px;
+			border-radius: 999px;
+			background: var(--card);
+			border: 1px solid var(--line);
+			color: var(--fg);
+			font-size: 14px;
+			line-height: 1;
+			transition: border-color .2s ease, transform .05s ease;
+			will-change: transform;
+		}
+
+		.badge:hover {
+			border-color: var(--accent);
+			text-decoration: none;
+			transform: translateY(-1px);
+		}
+
+		.badge svg {
+			width: 16px;
+			height: 16px;
+			display: block;
+		}
+
+		.badge.email svg {
+			color: #EA4335;
+		}
+
+		/* Gmail Red */
+		.badge.github svg {
+			color: #181717;
+		}
+
+		/* GitHub Black */
+		.badge.scholar svg {
+			color: #0A7EC2;
+		}
+
+		/* Google Scholar Blue */
+		.badge.orcid svg {
+			color: #A6CE39;
+		}
+
+		/* ORCID Green */
+
+		.pills {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 8px;
+		}
+
+		.pill {
+			padding: 6px 12px;
+			margin: 0;
+			border: 1px solid var(--line);
+			border-radius: 999px;
+			font-size: 14px;
+			color: var(--muted);
+			background: transparent;
+			transition: border-color .2s, color .2s;
+		}
+
+		.pill:hover {
+			border-color: var(--accent);
+			color: var(--fg);
+		}
+
+		.skills {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 10px;
+		}
+
+		.skill {
+			display: inline-flex;
+			align-items: center;
+			gap: 6px;
+			padding: 6px 12px;
+			border-radius: 999px;
+			border: 1px solid var(--line);
+			background: var(--card);
+			color: var(--muted);
+			font-size: 14px;
+			transition: border-color .2s, color .2s, background .2s;
+		}
+
+		.skill:hover {
+			border-color: var(--accent);
+			color: var(--fg);
+		}
+
+		.skill svg {
+			width: 16px;
+			height: 16px;
+			display: block;
+		}
+
+		.skill.python svg {
+			color: #3776AB;
+		}
+
+		.skill.tensorflow svg {
+			color: #FF6F00;
+		}
+
+		.skill.pytorch svg {
+			color: #EE4C2C;
+		}
+
+		.skill.android svg {
+			color: #3DDC84;
+		}
+
+		.skill.github svg {
+			color: #181717;
+		}
+
+		.skill.linux svg {
+			color: #FCC624;
+		}
 	</style>
 	<!-- Favicon (브라우저 탭 아이콘) -->
 	<link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
@@ -171,7 +304,7 @@
 	<!-- 검색/공유 기본 설명 -->
 	<meta name="description" content="Indoor Navigation · PDR · Sensor Fusion · Deep Learning">
 
-	<!-- Canonical (중복 URL 정리) -->
+	<!-- Canonical -->
 	<link rel="canonical" href="https://gitboseong.github.io/">
 
 	<!-- Open Graph (공유 미리보기) -->
@@ -198,12 +331,48 @@
 			<div>
 				<h1>Boseong Kim</h1>
 				<div class="tagline">Indoor Navigation · PDR · Sensor Fusion · Deep Learning</div>
-				<div class="links">
-					<a class="btn" href="mailto:bskim01@hallym.ac.kr">Email</a>
-					<a class="btn" href="https://github.com/GitBoseong" target="_blank">GitHub</a>
-					<a class="btn" href="https://scholar.google.co.kr/citations?hl=ko&user=EO7yVY0AAAAJ"
-						target="_blank">Google Scholar</a>
-					<a class="btn" href="https://orcid.org/0009-0008-5259-859X" target="_blank">ORCID</a>
+				<div class="badges">
+					<!-- Email -->
+					<a class="badge email" href="mailto:bskim01@hallym.ac.kr" aria-label="Email">
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+							stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+							<path d="M4 6h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Z" />
+							<path d="m22 8-10 6L2 8" />
+						</svg>
+						Email
+					</a>
+
+					<!-- GitHub -->
+					<a class="badge github" href="https://github.com/GitBoseong" target="_blank" rel="noreferrer"
+						aria-label="GitHub">
+						<svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+							<path
+								d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2.17c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.74.08-.74 1.2.08 1.83 1.24 1.83 1.24 1.07 1.84 2.81 1.31 3.49 1 .11-.78.42-1.31.76-1.61-2.67-.31-5.47-1.34-5.47-5.95 0-1.31.47-2.38 1.24-3.22-.12-.31-.54-1.56.12-3.26 0 0 1.01-.32 3.3 1.23a11.46 11.46 0 0 1 6 0C16.05 4.7 17.05 5 17.05 5c.67 1.7.25 2.95.13 3.26.77.84 1.23 1.91 1.23 3.22 0 4.62-2.8 5.63-5.48 5.94.43.37.82 1.1.82 2.23v3.31c0 .32.22.7.83.58A12 12 0 0 0 12 .5Z" />
+						</svg>
+						GitHub
+					</a>
+
+					<!-- Google Scholar -->
+					<a class="badge scholar" href="https://scholar.google.co.kr/citations?hl=ko&user=EO7yVY0AAAAJ"
+						target="_blank" rel="noreferrer" aria-label="Google Scholar">
+						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+							stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+							<path d="M22 10 12 5 2 10l10 5 10-5Z" />
+							<path d="M6 12v5c2.5 2 9.5 2 12 0v-5" />
+						</svg>
+						Scholar
+					</a>
+
+					<!-- ORCID -->
+					<a class="badge orcid" href="https://orcid.org/0009-0008-5259-859X" target="_blank" rel="noreferrer"
+						aria-label="ORCID">
+						<svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
+							<circle cx="12" cy="12" r="10"></circle>
+							<rect x="10.8" y="6.5" width="2.4" height="11" fill="var(--bg)"></rect>
+							<circle cx="8.2" cy="8.2" r="1.2" fill="var(--bg)"></circle>
+						</svg>
+						ORCID
+					</a>
 				</div>
 			</div>
 			<div class="avatar">
@@ -231,13 +400,46 @@
 
 		<section>
 			<h2>Skills</h2>
-			<div>
-				<span class="pill">Python</span>
-				<span class="pill">TensorFlow</span>
-				<span class="pill">PyTorch</span>
-				<span class="pill">Android</span>
-				<span class="pill">Git/GitHub</span>
-				<span class="pill">Linux</span>
+			<div class="skills">
+
+				<div class="skill python">
+					<svg viewBox="0 0 24 24" fill="currentColor">
+						<path
+							d="M14.25 3h-4.5C7.9 3 7 3.9 7 5v3h5v1H4.75C3.8 9 3 9.8 3 10.75v2.5C3 14.2 3.8 15 4.75 15H7v-1.5c0-1.1.9-2 2-2h6c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-.75zM10 5.5a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5Zm4 13.5h4.25c.95 0 1.75-.8 1.75-1.75v-2.5c0-.95-.8-1.75-1.75-1.75H17v1.5c0 1.1-.9 2-2 2H9c-1.1 0-2 .9-2 2v3c0 1.1.9 2 2 2h.75c.55 0 1-.45 1-1v-3h4.5v-1h5.25c.95 0 1.75-.8 1.75-1.75v-2.5" />
+					</svg>
+					Python
+				</div>
+
+				<div class="skill tensorflow">
+					<svg viewBox="0 0 24 24" fill="currentColor">
+						<path d="M1 8L12 2l11 6v8l-2 1v-6l-4-2v6l-2 1v-6l-3-1.5L7 10v6l-2 1V9L1 8z" />
+					</svg>
+					TensorFlow
+				</div>
+
+				<div class="skill pytorch">
+					<svg viewBox="0 0 24 24" fill="currentColor">
+						<path d="M12 2l2.1 2.1a8.5 8.5 0 1 1-2.1 17.9 8.5 8.5 0 1 1 2.1-17.9L12 2z" />
+					</svg>
+					PyTorch
+				</div>
+
+				<div class="skill android">
+					<svg viewBox="0 0 24 24" fill="currentColor">
+						<path
+							d="M17.6 9l1.4-2.4-.9-.5-1.4 2.5A7.5 7.5 0 0 0 12 7c-2 0-3.8.8-5.1 2.1L5.5 6.1l-.9.5L6 9A7.5 7.5 0 0 0 4 13v5c0 .6.4 1 1 1h1c.6 0 1-.4 1-1v-5c0-1.7 1.3-3 3-3h4c1.7 0 3 1.3 3 3v5c0 .6.4 1 1 1h1c.6 0 1-.4 1-1v-5c0-1.5-.5-2.9-1.4-4z" />
+					</svg>
+					Android
+				</div>
+
+				<div class="skill github">
+					<svg viewBox="0 0 24 24" fill="currentColor">
+						<path
+							d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2.17c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.74.08-.74 1.2.08 1.83 1.24 1.83 1.24 1.07 1.84 2.81 1.31 3.49 1 .11-.78.42-1.31.76-1.61-2.67-.31-5.47-1.34-5.47-5.95 0-1.31.47-2.38 1.24-3.22-.12-.31-.54-1.56.12-3.26 0 0 1.01-.32 3.3 1.23a11.46 11.46 0 0 1 6 0C16.05 4.7 17.05 5 17.05 5c.67 1.7.25 2.95.13 3.26.77.84 1.23 1.91 1.23 3.22 0 4.62-2.8 5.63-5.48 5.94.43.37.82 1.1.82 2.23v3.31c0 .32.22.7.83.58A12 12 0 0 0 12 .5Z" />
+					</svg>
+					Git
+				</div>
+
 			</div>
 		</section>
 
