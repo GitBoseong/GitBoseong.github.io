@@ -5,7 +5,6 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>Boseong Kim | CV</title>
-	<meta name="description" content="Boseong Kim | Indoor Navigation · PDR · Sensor Fusion · Deep Learning" />
 	<style>
 		:root {
 			--bg: #0b0c10;
@@ -64,15 +63,6 @@
 			margin-bottom: 32px;
 		}
 
-		.avatar {
-			width: 100px;
-			height: 100px;
-			border-radius: 20px;
-			background: var(--card);
-			display: grid;
-			place-items: center;
-			font-size: 48px;
-		}
 
 		h1 {
 			margin: 0;
@@ -150,6 +140,7 @@
 			background: var(--card);
 			display: grid;
 			place-items: center;
+			box-shadow: 0 6px 20px rgba(0, 0, 0, .25);
 		}
 
 		.avatar img {
@@ -159,7 +150,46 @@
 			object-position: bottom;
 			display: block;
 		}
+
+		@media (max-width: 680px) {
+			header {
+				grid-template-columns: 1fr;
+			}
+
+			.avatar {
+				width: 100%;
+				max-width: 320px;
+				height: 420px;
+				margin: 0 auto;
+			}
+		}
 	</style>
+	<!-- Favicon (브라우저 탭 아이콘) -->
+	<link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
+
+
+	<!-- 검색/공유 기본 설명 -->
+	<meta name="description" content="Indoor Navigation · PDR · Sensor Fusion · Deep Learning">
+
+	<!-- Canonical (중복 URL 정리) -->
+	<link rel="canonical" href="https://gitboseong.github.io/">
+
+	<!-- Open Graph (공유 미리보기) -->
+	<meta property="og:type" content="website">
+	<meta property="og:site_name" content="Boseong Kim">
+	<meta property="og:title" content="Boseong Kim | CV">
+	<meta property="og:description" content="Indoor Navigation · PDR · Sensor Fusion · Deep Learning">
+	<meta property="og:url" content="https://gitboseong.github.io/">
+	<meta property="og:image" content="https://gitboseong.github.io/images/og-cover.jpg?v=1">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="630">
+	<meta property="og:locale" content="en_US">
+
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Boseong Kim | CV">
+	<meta name="twitter:description" content="Indoor Navigation · PDR · Sensor Fusion · Deep Learning">
+	<meta name="twitter:image" content="https://gitboseong.github.io/images/og-cover.jpg?v=1">
 </head>
 
 <body>
@@ -196,6 +226,18 @@
 				<span class="pill">Indoor Navigation</span>
 				<span class="pill">PDR</span>
 				<span class="pill">Deep Learning</span>
+			</div>
+		</section>
+
+		<section>
+			<h2>Skills</h2>
+			<div>
+				<span class="pill">Python</span>
+				<span class="pill">TensorFlow</span>
+				<span class="pill">PyTorch</span>
+				<span class="pill">Android</span>
+				<span class="pill">Git/GitHub</span>
+				<span class="pill">Linux</span>
 			</div>
 		</section>
 
@@ -275,17 +317,7 @@
 			</ul>
 		</section>
 
-		<section>
-			<h2>Skills</h2>
-			<div>
-				<span class="pill">Python</span>
-				<span class="pill">TensorFlow</span>
-				<span class="pill">PyTorch</span>
-				<span class="pill">Android</span>
-				<span class="pill">Git/GitHub</span>
-				<span class="pill">Linux</span>
-			</div>
-		</section>
+
 
 		<footer>
 			© <span id="year"></span> Boseong Kim · Hosted on GitHub Pages
