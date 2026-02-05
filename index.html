@@ -296,6 +296,60 @@
 		.skill.linux svg {
 			color: #FCC624;
 		}
+
+		/* === Projects (Accordion) === */
+		.projects {
+			display: grid;
+			gap: 10px;
+		}
+
+		.project {
+			border: 1px solid var(--line);
+			background: var(--card);
+			border-radius: 14px;
+			padding: 0;
+			overflow: hidden;
+		}
+
+		.project summary {
+			list-style: none;
+			cursor: pointer;
+			padding: 14px 16px;
+			display: flex;
+			align-items: baseline;
+			justify-content: space-between;
+			gap: 12px;
+		}
+
+		.project summary::-webkit-details-marker {
+			display: none;
+		}
+
+		.project[open] summary {
+			border-bottom: 1px solid var(--line);
+		}
+
+		.project-title {
+			font-weight: 600;
+		}
+
+		.project-period {
+			font-size: 14px;
+			white-space: nowrap;
+		}
+
+		.project-body {
+			padding: 12px 16px 16px;
+		}
+
+		.project-body p {
+			margin: 0 0 10px;
+		}
+
+		.project-body ul {
+			margin: 0;
+			padding-left: 18px;
+		}
 	</style>
 	<!-- Favicon (브라우저 탭 아이콘) -->
 	<link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
@@ -383,11 +437,14 @@
 		<section>
 			<h2>Profile</h2>
 			<p>
-				Undergraduate researcher at the School of Software, Hallym University. <br>
-				Conducting research on AI-based Pedestrian Dead Reckoning (PDR) using smartphone IMU sensors. <br>
-				Interested in indoor positioning, sensor fusion, and deep learning.
+				M.S. student in Computer Engineering at Hallym University (2026–present). <br>
+				Conducting research on AI-based indoor positioning systems integrating Pedestrian Dead Reckoning (PDR),
+				wireless signals, and sensor fusion using smartphone IMU data. <br>
+				Research interests include indoor localization, multimodal sensor fusion, and deep learning–based
+				navigation systems.
 			</p>
 		</section>
+
 
 		<section>
 			<h2>Research Areas</h2>
@@ -446,8 +503,13 @@
 		<section>
 			<h2>Education</h2>
 			<ul>
-				<li><strong>Division of Software, College of Information Science, Hallym University</strong> — B.S.
-					(2020–present)</li>
+				<li>
+					<strong>Department of Computer Engineering, Hallym University</strong> — M.S. (2026–present)
+				</li>
+				<li>
+					<strong>Division of Software, College of Information Science, Hallym University</strong> — B.S.
+					(2020–2026)
+				</li>
 			</ul>
 		</section>
 
@@ -457,10 +519,18 @@
 			<h3>International Journals (SCI)</h3>
 			<ul>
 				<li>
+					[J2] <b><u>Kim, B.</u></b>, Li, S., Kim, J., & Shin, B. (2026).<br>
+					<em>AI-Generated Spatial Pattern Matching for Hospital Indoor Positioning.</em><br>
+					<span>Applied Sciences — under review.</span><br>
+					<span class="muted">JCR: Q2 (Engineering, Multidisciplinary) / IF: 2.7 (2024)</span>
+				</li>
+
+				<li>
 					[J1] Shin, B., Li, S., & <b><u>Kim, B.</u></b> (2025).<br>
 					<em>Deep Learning-Based Vehicle Speed Estimation Using Smartphone Sensors in GNSS-Denied
 						Environment.</em><br>
 					<span>Applied Sciences, 15(16), 8824.</span><br>
+					<span class="muted">JCR: Q2 (Engineering, Multidisciplinary) / IF: 2.7 (2024)</span><br>
 					<a href="https://doi.org/10.3390/app15168824" target="_blank"
 						rel="noreferrer">10.3390/app15168824</a>
 				</li>
@@ -503,7 +573,8 @@
 				</li>
 				<li>
 					[C2] Li, S., Kim, B., Shin, B. (2025).
-					<em>A study on the estimation of vehicle speed using smartphone sensor data with AI technology.</em><br>
+					<em>A study on the estimation of vehicle speed using smartphone sensor data with AI
+						technology.</em><br>
 					<span>Proceedings of the KICS Conference, Feb 5–7, 2025, Yongpyong, Korea.</span><br>
 					<a href="https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE12132368" target="_blank"
 						rel="noreferrer">KICS 2025 Program</a>
@@ -529,33 +600,65 @@
 			</ul>
 
 			<h2>참여 연구과제</h2>
-			<ul>
-				<li>
-					<strong>글로컬 대학, M-Campus 과제</strong><br>
-					AI 기반 해안관광 내비게이션 시스템 구축을 위한 한국형 지리정보 통합 플랫폼 개발<br>
-					연구기간: 2025-08-01 ~ 2026-01-31
-				</li>
-				<li>
-					<strong>AI융합연구원 과제</strong><br>
-					AI 기반 저비용 병원 내 위치추정 시스템 개발 및 실증 연구<br>
-					연구기간: 2025-06-01 ~ 2026-01-31
-				</li>
-				<li>
-					<strong>경찰청 과학치안진흥센터 (참여)</strong><br>
-					사이버범죄수사단서 통합 분석 및 추론 시스템 개발<br>
-					연구기간: 2025-04-01 ~ 2028-12-31 (총 연구비: 240억)
-				</li>
-				<li>
-					<strong>중소기업기술정보진흥원 창업성장기술개발 (완료)</strong><br>
-					e-paper 패널 기반 저전력 원격 디지털 안내/광고 게시판 및 생성형 AI 기반 관리 시스템 개발<br>
-					연구기간: 2024-09-01 ~ 2025-08-31
-				</li>
-				<li>
-					<strong>한림대학교 글로컬대학 연구 프로젝트 (완료)</strong><br>
-					1:1 학습자 맞춤형 AI튜터 개발 방안<br>
-					연구기간: 2024-08-21 ~ 2025-02-14
-				</li>
-			</ul>
+
+			<div class="projects">
+
+				<details class="project">
+					<summary>
+						<span class="project-title">사이버범죄수사단서 통합 분석 및 추론 시스템 개발</span>
+						<span class="project-period muted">2025-04-01 ~ 2028-12-31</span>
+					</summary>
+					<div class="project-body">
+						<p class="muted">
+							경찰청 과학치안진흥센터 (참여)
+						</p>
+						<ul>
+							<li><b>총 연구비</b>: 240억</li>
+							<li><b>역할</b>: 타겟 용의자 위치 추적 고도화 기술 개발 </li>
+							<li><b>역할</b>: 통신 트랜잭션 데이터를 활용한 대포폰 검출 고도화 기술 연구 </li>
+							<li><b>주요 기여</b>: 통화 이력 패턴을 기반으로 한 대포폰 추정 알고리즘 설계 및 구현 (1년차)</li>
+						</ul>
+					</div>
+				</details>
+
+				<details class="project">
+					<summary>
+						<span class="project-title">AI 기반 저비용 병원 내 위치추정 시스템 개발 및 실증 연구 (완료)</span>
+						<span class="project-period muted">2025-06-01 ~ 2026-01-31</span>
+					</summary>
+					<div class="project-body">
+						<p class="muted">
+							한림대학교 AI융합연구원 과제
+						</p>
+						<ul>
+							<li><b>역할</b>: 실환경 데이터 수집 및 AI-PDR 모델 개발</li>
+							<li><b>주요 기여</b>: 한림성심병원 본관 1층 Radio Map 구축, Surface Correlation(SC)과 AI-PDR을 결합한
+								관성–무선 융합 알고리즘 설계·실증</li>
+							<li><b>성과</b>: 실증 결과를 기반으로 국제학술지 Applied Sciences 투고</li>
+						</ul>
+					</div>
+				</details>
+
+
+				<details class="project">
+					<summary>
+						<span class="project-title">e-paper 패널 기반 저전력 원격 디지털 안내/광고 게시판 및 생성형 AI 기반 관리 시스템 개발 (완료)</span>
+						<span class="project-period muted">2024-09-01 ~ 2025-08-31</span>
+					</summary>
+					<div class="project-body">
+						<p class="muted">
+							중소기업기술정보진흥원 창업성장기술개발
+						</p>
+						<ul>
+							<li><b>역할</b>: 시스템 전력 소비 분석 및 에너지 효율 검증</li>
+							<li><b>주요 기여</b>: e-paper 기반 디지털 안내 시스템의 소비전력을 정량적으로 분석하고, 목표 저전력 운용 기준 충족 여부를 평가함</li>
+							<li><b>성과</b>: 특허 출원 — 「이페이퍼 디스플레이를 위한 게시 콘텐츠 관리 시스템」 (출원번호: 10-2025-0129940)</li>
+						</ul>
+
+					</div>
+				</details>
+			</div>
+
 		</section>
 
 
