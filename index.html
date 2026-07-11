@@ -1,676 +1,405 @@
 <!doctype html>
-<html lang="en">
-
+<html lang="en" data-theme="dark">
 <head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<title>Boseong Kim | CV</title>
-	<style>
-		:root {
-			--bg: #0b0c10;
-			--fg: #e8eaee;
-			--muted: #a0a6b2;
-			--card: #11141a;
-			--line: #22262e;
-			--accent: #6ea8fe;
-		}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-		@media (prefers-color-scheme: light) {
-			:root {
-				--bg: #ffffff;
-				--fg: #151922;
-				--muted: #606776;
-				--card: #f6f7fa;
-				--line: #e7eaf1;
-				--accent: #0d6efd;
-			}
-		}
+  <title>Boseong Kim | Academic CV</title>
+  <meta name="description" content="Boseong Kim — M.S. student researching indoor positioning, PDR, sensor fusion, and deep learning.">
+  <link rel="canonical" href="https://gitboseong.github.io/">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <meta name="color-scheme" content="dark light">
+  <link rel="stylesheet" href="styles.css">
+  <script src="theme.js" defer></script>
 
-		* {
-			box-sizing: border-box;
-		}
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Boseong Kim">
+  <meta property="og:title" content="Boseong Kim | Academic CV">
+  <meta property="og:description" content="Indoor Positioning · PDR · Sensor Fusion · Deep Learning">
+  <meta property="og:url" content="https://gitboseong.github.io/">
+  <meta property="og:image" content="https://gitboseong.github.io/images/og-cover2.jpg?v=1">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_US">
 
-		html,
-		body {
-			margin: 0;
-			padding: 0;
-			background: var(--bg);
-			color: var(--fg);
-			font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", Arial, sans-serif;
-			line-height: 1.6;
-		}
-
-		a {
-			color: var(--accent);
-			text-decoration: none;
-		}
-
-		a:hover {
-			text-decoration: underline;
-		}
-
-		.wrap {
-			max-width: 900px;
-			margin: 0 auto;
-			padding: 32px 20px 80px;
-		}
-
-		header {
-			display: grid;
-			grid-template-columns: 1fr auto;
-			gap: 20px;
-			align-items: center;
-			margin-bottom: 32px;
-		}
-
-
-		h1 {
-			margin: 0;
-			font-size: clamp(24px, 4vw, 36px);
-			line-height: 1.2;
-		}
-
-		.muted {
-			color: var(--muted);
-		}
-
-		.tagline {
-			margin-top: 6px;
-		}
-
-		.links {
-			margin-top: 12px;
-			display: flex;
-			flex-wrap: wrap;
-			gap: 8px;
-		}
-
-		.btn {
-			padding: 6px 12px;
-			border-radius: 8px;
-			background: var(--card);
-			border: 1px solid var(--line);
-			color: var(--fg);
-		}
-
-		.btn:hover {
-			border-color: var(--accent);
-		}
-
-		section {
-			margin-bottom: 32px;
-		}
-
-		h2 {
-			font-size: 20px;
-			margin-bottom: 12px;
-		}
-
-		ul {
-			padding-left: 18px;
-			margin: 0;
-		}
-
-		li {
-			margin-bottom: 6px;
-		}
-
-		.pill {
-			display: inline-block;
-			padding: 4px 10px;
-			margin: 4px;
-			border: 1px solid var(--line);
-			border-radius: 999px;
-			font-size: 14px;
-			color: var(--muted);
-		}
-
-		footer {
-			text-align: center;
-			font-size: 14px;
-			color: var(--muted);
-			margin-top: 40px;
-		}
-
-		.avatar {
-			width: 300px;
-			height: 450px;
-			border-radius: 20px;
-			overflow: hidden;
-			background: var(--card);
-			display: grid;
-			place-items: center;
-			box-shadow: 0 6px 20px rgba(0, 0, 0, .25);
-		}
-
-		.avatar img {
-			width: 100%;
-			height: 100%;
-			object-fit: cover;
-			object-position: bottom;
-			display: block;
-		}
-
-		@media (max-width: 680px) {
-			header {
-				grid-template-columns: 1fr;
-			}
-
-			.avatar {
-				width: 100%;
-				max-width: 320px;
-				height: 420px;
-				margin: 0 auto;
-			}
-		}
-
-		/* === Badge style ====== */
-		.badges {
-			display: flex;
-			flex-wrap: wrap;
-			gap: 8px;
-			margin-top: 12px;
-		}
-
-		.badge {
-			display: inline-flex;
-			align-items: center;
-			gap: 8px;
-			height: 32px;
-			padding: 0 12px;
-			border-radius: 999px;
-			background: var(--card);
-			border: 1px solid var(--line);
-			color: var(--fg);
-			font-size: 14px;
-			line-height: 1;
-			transition: border-color .2s ease, transform .05s ease;
-			will-change: transform;
-		}
-
-		.badge:hover {
-			border-color: var(--accent);
-			text-decoration: none;
-			transform: translateY(-1px);
-		}
-
-		.badge svg {
-			width: 16px;
-			height: 16px;
-			display: block;
-		}
-
-		.badge.email svg {
-			color: #EA4335;
-		}
-
-		/* Gmail Red */
-		.badge.github svg {
-			color: #181717;
-		}
-
-		/* GitHub Black */
-		.badge.scholar svg {
-			color: #0A7EC2;
-		}
-
-		/* Google Scholar Blue */
-		.badge.orcid svg {
-			color: #A6CE39;
-		}
-
-		/* ORCID Green */
-
-		.pills {
-			display: flex;
-			flex-wrap: wrap;
-			gap: 8px;
-		}
-
-		.pill {
-			padding: 6px 12px;
-			margin: 0;
-			border: 1px solid var(--line);
-			border-radius: 999px;
-			font-size: 14px;
-			color: var(--muted);
-			background: transparent;
-			transition: border-color .2s, color .2s;
-		}
-
-		.pill:hover {
-			border-color: var(--accent);
-			color: var(--fg);
-		}
-
-		.skills {
-			display: flex;
-			flex-wrap: wrap;
-			gap: 10px;
-		}
-
-		.skill {
-			display: inline-flex;
-			align-items: center;
-			gap: 6px;
-			padding: 6px 12px;
-			border-radius: 999px;
-			border: 1px solid var(--line);
-			background: var(--card);
-			color: var(--muted);
-			font-size: 14px;
-			transition: border-color .2s, color .2s, background .2s;
-		}
-
-		.skill:hover {
-			border-color: var(--accent);
-			color: var(--fg);
-		}
-
-		.skill svg {
-			width: 16px;
-			height: 16px;
-			display: block;
-		}
-
-		.skill.python svg {
-			color: #3776AB;
-		}
-
-		.skill.tensorflow svg {
-			color: #FF6F00;
-		}
-
-		.skill.pytorch svg {
-			color: #EE4C2C;
-		}
-
-		.skill.android svg {
-			color: #3DDC84;
-		}
-
-		.skill.github svg {
-			color: #181717;
-		}
-
-		.skill.linux svg {
-			color: #FCC624;
-		}
-
-		/* === Projects (Accordion) === */
-		.projects {
-			display: grid;
-			gap: 10px;
-		}
-
-		.project {
-			border: 1px solid var(--line);
-			background: var(--card);
-			border-radius: 14px;
-			padding: 0;
-			overflow: hidden;
-		}
-
-		.project summary {
-			list-style: none;
-			cursor: pointer;
-			padding: 14px 16px;
-			display: flex;
-			align-items: baseline;
-			justify-content: space-between;
-			gap: 12px;
-		}
-
-		.project summary::-webkit-details-marker {
-			display: none;
-		}
-
-		.project[open] summary {
-			border-bottom: 1px solid var(--line);
-		}
-
-		.project-title {
-			font-weight: 600;
-		}
-
-		.project-period {
-			font-size: 14px;
-			white-space: nowrap;
-		}
-
-		.project-body {
-			padding: 12px 16px 16px;
-		}
-
-		.project-body p {
-			margin: 0 0 10px;
-		}
-
-		.project-body ul {
-			margin: 0;
-			padding-left: 18px;
-		}
-	</style>
-	<!-- Favicon (브라우저 탭 아이콘) -->
-	<link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
-
-
-	<!-- 검색/공유 기본 설명 -->
-	<meta name="description" content="Indoor Positioning · PDR · Sensor Fusion · Deep Learning">
-
-	<!-- Canonical -->
-	<link rel="canonical" href="https://gitboseong.github.io/">
-
-	<!-- Open Graph (공유 미리보기) -->
-	<meta property="og:type" content="website">
-	<meta property="og:site_name" content="Boseong Kim">
-	<meta property="og:title" content="Boseong Kim | CV">
-	<meta property="og:description" content="Indoor Positioning · PDR · Sensor Fusion · Deep Learning">
-	<meta property="og:url" content="https://gitboseong.github.io/">
-	<meta property="og:image" content="https://gitboseong.github.io/images/og-cover2.jpg?v=1">
-	<meta property="og:image:width" content="1200">
-	<meta property="og:image:height" content="630">
-	<meta property="og:locale" content="en_US">
-
-	<!-- Twitter Card -->
-	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:title" content="Boseong Kim | CV">
-	<meta name="twitter:description" content="Indoor Positioning · PDR · Sensor Fusion · Deep Learning">
-	<meta name="twitter:image" content="https://gitboseong.github.io/images/og-cover2.jpg?v=1">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Boseong Kim | Academic CV">
+  <meta name="twitter:description" content="Indoor Positioning · PDR · Sensor Fusion · Deep Learning">
+  <meta name="twitter:image" content="https://gitboseong.github.io/images/og-cover2.jpg?v=1">
 </head>
 
 <body>
-	<div class="wrap">
-		<header>
-			<div>
-				<h1>Boseong Kim</h1>
-				<div class="tagline">Indoor Positioning · PDR · Sensor Fusion · Deep Learning</div>
-				<div class="badges">
-					<!-- Email -->
-					<a class="badge email" href="mailto:bskim01@hallym.ac.kr" aria-label="Email">
-						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
-							stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-							<path d="M4 6h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2Z" />
-							<path d="m22 8-10 6L2 8" />
-						</svg>
-						Email
-					</a>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-					<!-- GitHub -->
-					<a class="badge github" href="https://github.com/GitBoseong" target="_blank" rel="noreferrer"
-						aria-label="GitHub">
-						<svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
-							<path
-								d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2.17c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.74.08-.74 1.2.08 1.83 1.24 1.83 1.24 1.07 1.84 2.81 1.31 3.49 1 .11-.78.42-1.31.76-1.61-2.67-.31-5.47-1.34-5.47-5.95 0-1.31.47-2.38 1.24-3.22-.12-.31-.54-1.56.12-3.26 0 0 1.01-.32 3.3 1.23a11.46 11.46 0 0 1 6 0C16.05 4.7 17.05 5 17.05 5c.67 1.7.25 2.95.13 3.26.77.84 1.23 1.91 1.23 3.22 0 4.62-2.8 5.63-5.48 5.94.43.37.82 1.1.82 2.23v3.31c0 .32.22.7.83.58A12 12 0 0 0 12 .5Z" />
-						</svg>
-						GitHub
-					</a>
+  <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light mode" title="Switch color theme">
+    <span class="theme-toggle-icon" aria-hidden="true">
+      <img class="theme-icon theme-icon-sun" src="assets/icons/sun.svg" alt="">
+      <img class="theme-icon theme-icon-moon" src="assets/icons/moon.svg" alt="">
+    </span>
+    <span class="theme-toggle-label">Light</span>
+  </button>
 
-					<!-- Google Scholar -->
-					<a class="badge scholar" href="https://scholar.google.co.kr/citations?hl=ko&user=EO7yVY0AAAAJ"
-						target="_blank" rel="noreferrer" aria-label="Google Scholar">
-						<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
-							stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-							<path d="M22 10 12 5 2 10l10 5 10-5Z" />
-							<path d="M6 12v5c2.5 2 9.5 2 12 0v-5" />
-						</svg>
-						Scholar
-					</a>
+  <div class="page-shell">
+    <aside class="sidebar" aria-label="Profile information">
+      <div class="profile-photo">
+        <img src="images/cv_pic2.png" alt="Portrait of Boseong Kim">
+      </div>
 
-					<!-- ORCID -->
-					<a class="badge orcid" href="https://orcid.org/0009-0008-5259-859X" target="_blank" rel="noreferrer"
-						aria-label="ORCID">
-						<svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor">
-							<circle cx="12" cy="12" r="10"></circle>
-							<rect x="10.8" y="6.5" width="2.4" height="11" fill="var(--bg)"></rect>
-							<circle cx="8.2" cy="8.2" r="1.2" fill="var(--bg)"></circle>
-						</svg>
-						ORCID
-					</a>
-				</div>
-			</div>
-			<div class="avatar">
-				<img src="images/cv_pic2.png" alt="Profile photo of Boseong Kim">
-			</div>
-		</header>
+      <div class="identity">
+        <h1>Boseong Kim</h1>
+        <p class="role">M.S. Student in Computer Engineering</p>
+        <p class="affiliation">
+          Next Navigation Lab<br>
+          Hallym University
+        </p>
+      </div>
 
-		<section>
-			<h2>Profile</h2>
-			<p>
-				M.S. student in Computer Engineering at Hallym University (2026–present). <br>
-				Conducting research on AI-based indoor positioning systems integrating Pedestrian Dead Reckoning (PDR),
-				wireless signals, and sensor fusion using smartphone IMU data. <br>
-				Research interests include indoor localization, multimodal sensor fusion, and deep learning–based
-				navigation systems.
-			</p>
-		</section>
+      <nav class="contact-list" aria-label="Contact and academic profiles">
+        <a class="contact-card" href="mailto:bskim01@hallym.ac.kr">
+          <span class="contact-icon">
+            <img src="assets/icons/email.svg" alt="" aria-hidden="true">
+          </span>
+          <span class="contact-copy">
+            <span class="contact-label">Email</span>
+            <span class="contact-value">bskim01@hallym.ac.kr</span>
+          </span>
+          <span class="contact-arrow" aria-hidden="true">↗</span>
+        </a>
 
+        <a class="contact-card" href="https://github.com/GitBoseong" target="_blank" rel="noreferrer">
+          <span class="contact-icon">
+            <img src="assets/icons/github.svg" alt="" aria-hidden="true">
+          </span>
+          <span class="contact-copy">
+            <span class="contact-label">GitHub</span>
+            <span class="contact-value">GitBoseong</span>
+          </span>
+          <span class="contact-arrow" aria-hidden="true">↗</span>
+        </a>
 
-		<section>
-			<h2>Research Areas</h2>
-			<div>
-				<span class="pill">Indoor Positioning</span>
-				<span class="pill">PDR</span>
-				<span class="pill">Deep Learning</span>
-			</div>
-		</section>
+        <a class="contact-card" href="https://scholar.google.co.kr/citations?hl=ko&amp;user=EO7yVY0AAAAJ" target="_blank" rel="noreferrer">
+          <span class="contact-icon">
+            <img src="assets/icons/scholar.svg" alt="" aria-hidden="true">
+          </span>
+          <span class="contact-copy">
+            <span class="contact-label">Google Scholar</span>
+            <span class="contact-value">Research Profile</span>
+          </span>
+          <span class="contact-arrow" aria-hidden="true">↗</span>
+        </a>
 
-		<section>
-			<h2>Skills</h2>
-			<div class="skills">
+        <a class="contact-card" href="https://orcid.org/0009-0008-5259-859X" target="_blank" rel="noreferrer">
+          <span class="contact-icon">
+            <img src="assets/icons/orcid.svg" alt="" aria-hidden="true">
+          </span>
+          <span class="contact-copy">
+            <span class="contact-label">ORCID</span>
+            <span class="contact-value">0009-0008-5259-859X</span>
+          </span>
+          <span class="contact-arrow" aria-hidden="true">↗</span>
+        </a>
+      </nav>
 
-				<div class="skill python">
-					<svg viewBox="0 0 24 24" fill="currentColor">
-						<path
-							d="M14.25 3h-4.5C7.9 3 7 3.9 7 5v3h5v1H4.75C3.8 9 3 9.8 3 10.75v2.5C3 14.2 3.8 15 4.75 15H7v-1.5c0-1.1.9-2 2-2h6c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-.75zM10 5.5a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5Zm4 13.5h4.25c.95 0 1.75-.8 1.75-1.75v-2.5c0-.95-.8-1.75-1.75-1.75H17v1.5c0 1.1-.9 2-2 2H9c-1.1 0-2 .9-2 2v3c0 1.1.9 2 2 2h.75c.55 0 1-.45 1-1v-3h4.5v-1h5.25c.95 0 1.75-.8 1.75-1.75v-2.5" />
-					</svg>
-					Python
-				</div>
+      <section class="sidebar-section" aria-labelledby="research-interests-title">
+        <h2 id="research-interests-title">Research Interests</h2>
+        <ul class="keyword-list">
+          <li>Indoor Positioning</li>
+          <li>Pedestrian Dead Reckoning</li>
+          <li>Sensor Fusion</li>
+          <li>Deep Learning</li>
+          <li>Smartphone IMU</li>
+        </ul>
+      </section>
 
-				<div class="skill tensorflow">
-					<svg viewBox="0 0 24 24" fill="currentColor">
-						<path d="M1 8L12 2l11 6v8l-2 1v-6l-4-2v6l-2 1v-6l-3-1.5L7 10v6l-2 1V9L1 8z" />
-					</svg>
-					TensorFlow
-				</div>
+      <section class="sidebar-section" aria-labelledby="skills-title">
+        <h2 id="skills-title">Technical Skills</h2>
+        <ul class="compact-list">
+          <li><strong>Languages</strong><span>Python, Kotlin</span></li>
+          <li><strong>ML</strong><span>TensorFlow, PyTorch</span></li>
+          <li><strong>Platforms</strong><span>Android, Linux</span></li>
+          <li><strong>Tools</strong><span>Git, Jupyter, VS Code</span></li>
+        </ul>
+      </section>
+    </aside>
 
-				<div class="skill pytorch">
-					<svg viewBox="0 0 24 24" fill="currentColor">
-						<path d="M12 2l2.1 2.1a8.5 8.5 0 1 1-2.1 17.9 8.5 8.5 0 1 1 2.1-17.9L12 2z" />
-					</svg>
-					PyTorch
-				</div>
+    <main id="main-content" class="main-content">
+      <header class="page-header">
+        <p class="eyebrow">Academic Curriculum Vitae</p>
+        <h2>Indoor Positioning, PDR, Sensor Fusion, and Deep Learning</h2>
+        <p>
+          I am an M.S. student in Computer Engineering at Hallym University. My research focuses on
+          AI-based indoor positioning systems that combine pedestrian dead reckoning, wireless signals,
+          and smartphone inertial sensors for robust navigation in GNSS-denied environments.
+        </p>
+      </header>
 
-				<div class="skill android">
-					<svg viewBox="0 0 24 24" fill="currentColor">
-						<path
-							d="M17.6 9l1.4-2.4-.9-.5-1.4 2.5A7.5 7.5 0 0 0 12 7c-2 0-3.8.8-5.1 2.1L5.5 6.1l-.9.5L6 9A7.5 7.5 0 0 0 4 13v5c0 .6.4 1 1 1h1c.6 0 1-.4 1-1v-5c0-1.7 1.3-3 3-3h4c1.7 0 3 1.3 3 3v5c0 .6.4 1 1 1h1c.6 0 1-.4 1-1v-5c0-1.5-.5-2.9-1.4-4z" />
-					</svg>
-					Android
-				</div>
+      <section class="cv-section" aria-labelledby="education-title">
+        <div class="section-heading">
+          <h2 id="education-title">Education</h2>
+        </div>
 
-				<div class="skill github">
-					<svg viewBox="0 0 24 24" fill="currentColor">
-						<path
-							d="M12 .5a12 12 0 0 0-3.79 23.4c.6.11.82-.26.82-.58v-2.17c-3.34.73-4.04-1.61-4.04-1.61-.55-1.39-1.34-1.76-1.34-1.76-1.09-.75.08-.74.08-.74 1.2.08 1.83 1.24 1.83 1.24 1.07 1.84 2.81 1.31 3.49 1 .11-.78.42-1.31.76-1.61-2.67-.31-5.47-1.34-5.47-5.95 0-1.31.47-2.38 1.24-3.22-.12-.31-.54-1.56.12-3.26 0 0 1.01-.32 3.3 1.23a11.46 11.46 0 0 1 6 0C16.05 4.7 17.05 5 17.05 5c.67 1.7.25 2.95.13 3.26.77.84 1.23 1.91 1.23 3.22 0 4.62-2.8 5.63-5.48 5.94.43.37.82 1.1.82 2.23v3.31c0 .32.22.7.83.58A12 12 0 0 0 12 .5Z" />
-					</svg>
-					Git
-				</div>
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="timeline-period">2026–Present</div>
+            <div class="timeline-content">
+              <h3>M.S. in Computer Engineering</h3>
+              <p>Department of Computer Engineering, Hallym University</p>
+            </div>
+          </article>
 
-			</div>
-		</section>
+          <article class="timeline-item">
+            <div class="timeline-period">2020–2026</div>
+            <div class="timeline-content">
+              <h3>B.S. in Software</h3>
+              <p>Division of Software, College of Information Science, Hallym University</p>
+            </div>
+          </article>
+        </div>
+      </section>
 
-		<section>
-			<h2>Education</h2>
-			<ul>
-				<li>
-					<strong>Department of Computer Engineering, Hallym University</strong> — M.S. (2026–present)
-				</li>
-				<li>
-					<strong>Division of Software, College of Information Science, Hallym University</strong> — B.S.
-					(2020–2026)
-				</li>
-			</ul>
-		</section>
+      <section class="cv-section" aria-labelledby="publications-title">
+        <div class="section-heading">
+          <h2 id="publications-title">Publications</h2>
+        </div>
 
-		<section>
-			<h2>Publications</h2>
+        <div class="subsection-heading">
+          <h3>Manuscripts Under Review</h3>
+          <span>International Journals</span>
+        </div>
 
-			<h3>International Journals (SCI)</h3>
-			<ul>
-				<li>
-					[J2] <b><u>Kim, B.</u></b>, Li, S., Kim, J., & Shin, B. (2026).<br>
-					<em>AI-Generated Spatial Pattern Matching for Hospital Indoor Positioning.</em><br>
-					<span>Applied Sciences, 16(5), 2552.</span><br>
-					<span class="muted">JCR: Q2 (Engineering, Multidisciplinary) / IF: 2.7 (2024)</span><br>
-					<a href="https://doi.org/10.3390/app16052552" target="_blank"
-						rel="noreferrer">10.3390/app16052552</a>
-				</li>
+        <ol class="publication-list">
+          <li class="publication-item">
+            <div class="publication-code">M2</div>
+            <div class="publication-body">
+              <p class="publication-authors">
+                <strong class="me">Kim, B.</strong>, &amp; Shin, B. (2026).
+              </p>
+              <p class="publication-title">
+                A Robust Multi-Carrying-Mode End-to-End Deep Learning Framework for PDR.
+              </p>
+              <p class="publication-venue">IEEE Sensors Journal.</p>
+              <span class="status-badge status-review">Under Review</span>
+            </div>
+          </li>
 
-				<li>
-					[J1] Shin, B., Li, S., & <b><u>Kim, B.</u></b> (2025).<br>
-					<em>Deep Learning-Based Vehicle Speed Estimation Using Smartphone Sensors in GNSS-Denied
-						Environment.</em><br>
-					<span>Applied Sciences, 15(16), 8824.</span><br>
-					<span class="muted">JCR: Q2 (Engineering, Multidisciplinary) / IF: 2.7 (2024)</span><br>
-					<a href="https://doi.org/10.3390/app15168824" target="_blank"
-						rel="noreferrer">10.3390/app15168824</a>
-				</li>
-			</ul>
+          <li class="publication-item">
+            <div class="publication-code">M1</div>
+            <div class="publication-body">
+              <p class="publication-authors">
+                Li, S., <strong class="me">Kim, B.</strong>, &amp; Shin, B. (2026).
+              </p>
+              <p class="publication-title">
+                AI-Based Orientation-Robust Vehicle Dead Reckoning Using Smartphone IMU Sensors.
+              </p>
+              <p class="publication-venue">IEEE Sensors Journal.</p>
+              <span class="status-badge status-review">Under Review</span>
+            </div>
+          </li>
+        </ol>
 
-			<h3>Domestic Journals (KCI)</h3>
-			<ul>
-				<li>
-					[K1] Kim, J., <b><u>Kim, B.</u></b>, & Shin, B. (2025)<br>
-					<em>Performance Analysis and Compensation Methods According to PDR Drift and Radio Map
-						Resolution.</em><br>
-					<span>Journal of Positioning, Navigation, and Timing, 14(3), 195–202.</span><br>
-					<a href="https://doi.org/10.11003/JPNT.2025.14.3.195" target="_blank"
-						rel="noreferrer">10.11003/JPNT.2025.14.3.195</a>
-				</li>
-			</ul>
+        <div class="subsection-heading">
+          <h3>International Journals</h3>
+          <span>SCI/SCIE</span>
+        </div>
 
-			<h3>Domestic Conferences</h3>
-			<ul>
-				<li>
-					[C5] <b><u>Kim, B.</u></b>, Li, S., Shin, B. (2025).
-					<em>Development of an LSTM-Based AI-PDR System Utilizing Smartphone IMU.</em><br>
-					<span>Proceedings of the IPNT Conference, Nov 5–7, 2025, Jeju, Korea.</span><br>
-					<a href="https://ipnt.or.kr/2025proc/35?sfl=wr_name&stx=%EA%B9%80%EB%B3%B4%EC%84%B1&sop=and"
-						target="_blank" rel="noreferrer">IPNT 2025 Proceedings</a>
-				</li>
-				<li>
-					[C4] Li, S., <b><u>Kim, B.</u></b>, Shin, B. (2025).
-					<em>Smartphone-Based Vehicle Trajectory Estimation Using Attention-LSTM.</em><br>
-					<span>Proceedings of the IPNT Conference, Nov 5–7, 2025, Jeju, Korea.</span><br>
-					<a href="https://ipnt.or.kr/2025proc/77?sfl=wr_name&stx=%EA%B9%80%EB%B3%B4%EC%84%B1&sop=and"
-						target="_blank" rel="noreferrer">IPNT 2025 Proceedings</a>
-				</li>
-				<li>
-					[C3] Kim, J., <b><u>Kim, B.</u></b>, Shin, B. (2025).
-					<em>Impact of PDR Drift and Radio Map Resolution on SC-based Indoor Localization.</em><br>
-					<span>Proceedings of the IPNT Conference, Nov 5–7, 2025, Jeju, Korea.</span><br>
-					<a href="https://ipnt.or.kr/2025proc/127?sfl=wr_name&stx=%EA%B9%80%EB%B3%B4%EC%84%B1&sop=and"
-						target="_blank" rel="noreferrer">IPNT 2025 Proceedings</a>
-				</li>
-				<li>
-					[C2] Li, S., Kim, B., Shin, B. (2025).
-					<em>A study on the estimation of vehicle speed using smartphone sensor data with AI
-						technology.</em><br>
-					<span>Proceedings of the KICS Conference, Feb 5–7, 2025, Yongpyong, Korea.</span><br>
-					<a href="https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE12132368" target="_blank"
-						rel="noreferrer">KICS 2025 Program</a>
-				</li>
-				<li>
-					[C1] <b><u>Kim, B.</u></b>, Shin, B. (2024).
-					<em>Enhancing Smartphone-Based Pedestrian Dead Reckoning Using AI in Various Motions.</em><br>
-					<span>Proceedings of the IPNT Conference, Nov 6–8, 2024, Jeju, Korea.</span><br>
-					<a href="https://ipnt.or.kr/2024proc/56?sfl=wr_name&stx=%EA%B9%80%EB%B3%B4%EC%84%B1&sop=and"
-						target="_blank" rel="noreferrer">IPNT 2024 Proceedings</a>
-				</li>
-			</ul>
-		</section>
+        <ol class="publication-list">
+          <li class="publication-item">
+            <div class="publication-code">J2</div>
+            <div class="publication-body">
+              <p class="publication-authors">
+                <strong class="me">Kim, B.</strong>, Li, S., Kim, J., &amp; Shin, B. (2026).
+              </p>
+              <p class="publication-title">AI-Generated Spatial Pattern Matching for Hospital Indoor Positioning.</p>
+              <p class="publication-venue">Applied Sciences, 16(5), 2552.</p>
+              <p class="publication-meta">JCR Q2 · Engineering, Multidisciplinary · IF 2.7 (2024)</p>
+              <a class="doi-link" href="https://doi.org/10.3390/app16052552" target="_blank" rel="noreferrer">
+                DOI: 10.3390/app16052552
+              </a>
+            </div>
+          </li>
 
-		<section>
-			<h2>수상경력</h2>
-			<ul>
-				<li>
-					<strong>한림대학교 SW 캡스톤디자인 경진대회 (2025-1)</strong><br>
-					한림대학교 공학관 대상 Wi-Fi 라디오맵 구축 및 SC 기반 저비용 실내 위치추정 기술 개발<br>
-					🏅 은상 수상
-				</li>
-			</ul>
+          <li class="publication-item">
+            <div class="publication-code">J1</div>
+            <div class="publication-body">
+              <p class="publication-authors">
+                Shin, B., Li, S., &amp; <strong class="me">Kim, B.</strong> (2025).
+              </p>
+              <p class="publication-title">
+                Deep Learning-Based Vehicle Speed Estimation Using Smartphone Sensors in GNSS-Denied Environment.
+              </p>
+              <p class="publication-venue">Applied Sciences, 15(16), 8824.</p>
+              <p class="publication-meta">JCR Q2 · Engineering, Multidisciplinary · IF 2.7 (2024)</p>
+              <a class="doi-link" href="https://doi.org/10.3390/app15168824" target="_blank" rel="noreferrer">
+                DOI: 10.3390/app15168824
+              </a>
+            </div>
+          </li>
+        </ol>
 
-			<h2>참여 연구과제</h2>
+        <div class="subsection-heading">
+          <h3>Domestic Journals</h3>
+          <span>KCI</span>
+        </div>
 
-			<div class="projects">
+        <ol class="publication-list">
+          <li class="publication-item">
+            <div class="publication-code">K1</div>
+            <div class="publication-body">
+              <p class="publication-authors">
+                Kim, J., <strong class="me">Kim, B.</strong>, &amp; Shin, B. (2025).
+              </p>
+              <p class="publication-title">
+                Performance Analysis and Compensation Methods According to PDR Drift and Radio Map Resolution.
+              </p>
+              <p class="publication-venue">Journal of Positioning, Navigation, and Timing, 14(3), 195–202.</p>
+              <a class="doi-link" href="https://doi.org/10.11003/JPNT.2025.14.3.195" target="_blank" rel="noreferrer">
+                DOI: 10.11003/JPNT.2025.14.3.195
+              </a>
+            </div>
+          </li>
+        </ol>
 
-				<details class="project">
-					<summary>
-						<span class="project-title">사이버범죄수사단서 통합 분석 및 추론 시스템 개발</span>
-						<span class="project-period muted">2025-04-01 ~ 2028-12-31</span>
-					</summary>
-					<div class="project-body">
-						<p class="muted">
-							경찰청 과학치안진흥센터 (참여)
-						</p>
-						<ul>
-							<li><b>총 연구비</b>: 240억</li>
-							<li><b>역할</b>: 타겟 용의자 위치 추적 고도화 기술 개발 </li>
-							<li><b>역할</b>: 통신 트랜잭션 데이터를 활용한 대포폰 검출 고도화 기술 연구 </li>
-							<li><b>주요 기여</b>: 통화 이력 패턴을 기반으로 한 대포폰 추정 알고리즘 설계 및 구현 (1년차)</li>
-						</ul>
-					</div>
-				</details>
+        <div class="subsection-heading">
+          <h3>Domestic Conferences</h3>
+          <span>Proceedings</span>
+        </div>
 
-				<details class="project">
-					<summary>
-						<span class="project-title">AI 기반 저비용 병원 내 위치추정 시스템 개발 및 실증 연구 (완료)</span>
-						<span class="project-period muted">2025-06-01 ~ 2026-01-31</span>
-					</summary>
-					<div class="project-body">
-						<p class="muted">
-							한림대학교 AI융합연구원 과제
-						</p>
-						<ul>
-							<li><b>역할</b>: 실환경 데이터 수집 및 AI-PDR 모델 개발</li>
-							<li><b>주요 기여</b>: 한림성심병원 본관 1층 Radio Map 구축, Surface Correlation(SC)과 AI-PDR을 결합한
-								관성–무선 융합 알고리즘 설계·실증</li>
-							<li><b>성과</b>: 실증 결과를 기반으로 국제학술지 Applied Sciences 투고</li>
-						</ul>
-					</div>
-				</details>
+        <ol class="publication-list publication-list-compact">
+          <li class="publication-item">
+            <div class="publication-code">C5</div>
+            <div class="publication-body">
+              <p class="publication-authors"><strong class="me">Kim, B.</strong>, Li, S., &amp; Shin, B. (2025).</p>
+              <p class="publication-title">Development of an LSTM-Based AI-PDR System Utilizing Smartphone IMU.</p>
+              <p class="publication-venue">Proceedings of the IPNT Conference, Nov. 5–7, 2025, Jeju, Korea.</p>
+              <a class="doi-link" href="https://ipnt.or.kr/2025proc/35?sfl=wr_name&amp;stx=%EA%B9%80%EB%B3%B4%EC%84%B1&amp;sop=and" target="_blank" rel="noreferrer">Proceedings</a>
+            </div>
+          </li>
 
+          <li class="publication-item">
+            <div class="publication-code">C4</div>
+            <div class="publication-body">
+              <p class="publication-authors">Li, S., <strong class="me">Kim, B.</strong>, &amp; Shin, B. (2025).</p>
+              <p class="publication-title">Smartphone-Based Vehicle Trajectory Estimation Using Attention-LSTM.</p>
+              <p class="publication-venue">Proceedings of the IPNT Conference, Nov. 5–7, 2025, Jeju, Korea.</p>
+              <a class="doi-link" href="https://ipnt.or.kr/2025proc/77?sfl=wr_name&amp;stx=%EA%B9%80%EB%B3%B4%EC%84%B1&amp;sop=and" target="_blank" rel="noreferrer">Proceedings</a>
+            </div>
+          </li>
 
-				<details class="project">
-					<summary>
-						<span class="project-title">e-paper 패널 기반 저전력 원격 디지털 안내/광고 게시판 및 생성형 AI 기반 관리 시스템 개발 (완료)</span>
-						<span class="project-period muted">2024-09-01 ~ 2025-08-31</span>
-					</summary>
-					<div class="project-body">
-						<p class="muted">
-							중소기업기술정보진흥원 창업성장기술개발
-						</p>
-						<ul>
-							<li><b>역할</b>: 시스템 전력 소비 분석 및 에너지 효율 검증</li>
-							<li><b>주요 기여</b>: e-paper 기반 디지털 안내 시스템의 소비전력을 정량적으로 분석하고, 목표 저전력 운용 기준 충족 여부를 평가함</li>
-							<li><b>성과</b>: 특허 출원 — 「이페이퍼 디스플레이를 위한 게시 콘텐츠 관리 시스템」 (출원번호: 10-2025-0129940)</li>
-						</ul>
+          <li class="publication-item">
+            <div class="publication-code">C3</div>
+            <div class="publication-body">
+              <p class="publication-authors">Kim, J., <strong class="me">Kim, B.</strong>, &amp; Shin, B. (2025).</p>
+              <p class="publication-title">Impact of PDR Drift and Radio Map Resolution on SC-based Indoor Localization.</p>
+              <p class="publication-venue">Proceedings of the IPNT Conference, Nov. 5–7, 2025, Jeju, Korea.</p>
+              <a class="doi-link" href="https://ipnt.or.kr/2025proc/127?sfl=wr_name&amp;stx=%EA%B9%80%EB%B3%B4%EC%84%B1&amp;sop=and" target="_blank" rel="noreferrer">Proceedings</a>
+            </div>
+          </li>
 
-					</div>
-				</details>
-			</div>
+          <li class="publication-item">
+            <div class="publication-code">C2</div>
+            <div class="publication-body">
+              <p class="publication-authors">Li, S., <strong class="me">Kim, B.</strong>, &amp; Shin, B. (2025).</p>
+              <p class="publication-title">A Study on the Estimation of Vehicle Speed Using Smartphone Sensor Data with AI Technology.</p>
+              <p class="publication-venue">Proceedings of the KICS Conference, Feb. 5–7, 2025, Yongpyong, Korea.</p>
+              <a class="doi-link" href="https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE12132368" target="_blank" rel="noreferrer">Proceedings</a>
+            </div>
+          </li>
 
-		</section>
+          <li class="publication-item">
+            <div class="publication-code">C1</div>
+            <div class="publication-body">
+              <p class="publication-authors"><strong class="me">Kim, B.</strong>, &amp; Shin, B. (2024).</p>
+              <p class="publication-title">Enhancing Smartphone-Based Pedestrian Dead Reckoning Using AI in Various Motions.</p>
+              <p class="publication-venue">Proceedings of the IPNT Conference, Nov. 6–8, 2024, Jeju, Korea.</p>
+              <a class="doi-link" href="https://ipnt.or.kr/2024proc/56?sfl=wr_name&amp;stx=%EA%B9%80%EB%B3%B4%EC%84%B1&amp;sop=and" target="_blank" rel="noreferrer">Proceedings</a>
+            </div>
+          </li>
+        </ol>
+      </section>
 
+      <section class="cv-section" aria-labelledby="awards-title">
+        <div class="section-heading">
+          <h2 id="awards-title">Awards</h2>
+        </div>
 
+        <article class="award-item">
+          <div class="award-year">2025</div>
+          <div>
+            <h3>Silver Award, Hallym University SW Capstone Design Competition</h3>
+            <p>
+              Development of a low-cost indoor positioning system using a Wi-Fi radio map and
+              Surface Correlation for the Hallym University Engineering Building.
+            </p>
+          </div>
+        </article>
+      </section>
 
-		<footer>
-			© <span id="year"></span> Boseong Kim · Hosted on GitHub Pages
-		</footer>
-	</div>
+      <section class="cv-section" aria-labelledby="projects-title">
+        <div class="section-heading">
+          <h2 id="projects-title">Research Projects</h2>
+        </div>
 
-	<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+        <div class="project-list">
+          <details class="project-item" open>
+            <summary>
+              <span>
+                <strong>Integrated Analysis and Inference System for Cybercrime Investigation Clues</strong>
+                <small>Police Science Institute</small>
+              </span>
+              <time>2025.04–2028.12</time>
+            </summary>
+            <div class="project-body">
+              <ul>
+                <li>Participating researcher in a large-scale national R&amp;D project.</li>
+                <li>Developing enhanced target-location tracking techniques.</li>
+                <li>Researching burner-phone detection using communication transaction data.</li>
+                <li>Designed and implemented a call-history pattern-based burner-phone estimation algorithm.</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="project-item">
+            <summary>
+              <span>
+                <strong>AI-Based Low-Cost Hospital Indoor Positioning System</strong>
+                <small>Hallym University AI Convergence Research Institute · Completed</small>
+              </span>
+              <time>2025.06–2026.01</time>
+            </summary>
+            <div class="project-body">
+              <ul>
+                <li>Collected real-world data and developed an AI-PDR model.</li>
+                <li>Constructed a radio map for the first floor of Hallym Sacred Heart Hospital.</li>
+                <li>Designed and evaluated an inertial-wireless fusion algorithm combining Surface Correlation and AI-PDR.</li>
+                <li>Published the experimental results in Applied Sciences.</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="project-item">
+            <summary>
+              <span>
+                <strong>Low-Power Remote Digital Signage Using E-Paper and Generative AI</strong>
+                <small>Startup Growth Technology Development Program · Completed</small>
+              </span>
+              <time>2024.09–2025.08</time>
+            </summary>
+            <div class="project-body">
+              <ul>
+                <li>Analyzed system power consumption and verified energy efficiency.</li>
+                <li>Quantitatively evaluated whether the e-paper signage platform met low-power operating requirements.</li>
+                <li>Patent application: “Posted Content Management System for E-Paper Displays” (10-2025-0129940).</li>
+              </ul>
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <footer class="page-footer">
+        © <span id="year"></span> Boseong Kim · Hosted on GitHub Pages
+      </footer>
+    </main>
+  </div>
+
 </body>
-
 </html>

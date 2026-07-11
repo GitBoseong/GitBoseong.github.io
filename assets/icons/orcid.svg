@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-labelledby="title">
+  <title>ORCID</title>
+  <rect width="24" height="24" rx="6" fill="#A6CE39"/>
+  <circle cx="12" cy="12" r="7.3" fill="#fff"/>
+  <circle cx="8.55" cy="8.55" r="1.05" fill="#A6CE39"/>
+  <rect x="7.65" y="10.15" width="1.8" height="5.65" rx=".35" fill="#A6CE39"/>
+  <path d="M11 10.15h2.2c2.05 0 3.45 1.08 3.45 2.82 0 1.76-1.4 2.83-3.45 2.83H11v-5.65Zm1.8 1.45v2.75h.54c.89 0 1.48-.51 1.48-1.38 0-.86-.59-1.37-1.48-1.37h-.54Z" fill="#A6CE39"/>
+</svg>
