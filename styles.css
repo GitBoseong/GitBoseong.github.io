@@ -824,24 +824,6 @@ html[data-theme="light"] .theme-icon-moon {
   font-size: 16px;
 }
 
-.write-link {
-  flex: 0 0 auto;
-  margin-bottom: 3px;
-  padding: 9px 14px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  background: var(--surface-soft);
-  color: var(--text);
-  font-size: 13px;
-  font-weight: 800;
-}
-
-.write-link:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-  text-decoration: none;
-}
-
 .news-list {
   display: grid;
   gap: 16px;
@@ -1247,11 +1229,6 @@ html[data-theme="light"] .theme-icon-moon {
     display: block;
   }
 
-  .write-link {
-    display: inline-flex;
-    margin-top: 20px;
-  }
-
   .news-card-content {
     padding: 20px;
   }
@@ -1388,8 +1365,7 @@ html[data-theme="light"] .theme-icon-moon {
     display: none;
   }
 
-  .site-nav,
-  .write-link {
+  .site-nav {
     display: none;
   }
 
