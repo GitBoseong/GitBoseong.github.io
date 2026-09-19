@@ -1,0 +1,61 @@
+[
+  {
+    "id": "2025-06-05-silver-prize-at-the-2025-hallym-university-sw-capstone-d",
+    "date": "2025-06-05",
+    "category": "Award",
+    "title": "Silver Prize at the 2025 Hallym University SW Capstone Design Competition",
+    "summary": "Received the Silver Prize at the 2025 Spring Semester SW Capstone Design Competition at Hallym University.",
+    "content": "I received the Silver Prize at the 2025 Spring Semester SW Capstone Design Competition held at Hallym University on June 5, 2025. It was a great opportunity to present our project and receive recognition for our work.",
+    "image": "images/news/2025-06-05-silver-prize-at-the-2025-hallym-university-sw-capstone-d.jpg",
+    "imageAlt": "Boseong Kim holding the Silver Prize certificate and award board at the 2025 Hallym University SW Capstone Design Competition.",
+    "links": []
+  },
+  {
+    "id": "2025-11-07-ipnt-conference-presentation",
+    "date": "2025-11-07",
+    "category": "Conference",
+    "title": "Paper presentation at the 2025 IPNT Conference",
+    "summary": "Attended the 2025 IPNT Conference in Jeju from November 5–7 and presented our work on an LSTM-based AI-PDR system.",
+    "content": "I presented “Development of an LSTM-Based AI-PDR System Utilizing Smartphone IMU,” a study on pedestrian dead reckoning using smartphone inertial sensor data and deep learning.",
+    "image": "images/news/2025-11-07-ipnt-conference-presentation.webp",
+    "imageAlt": "Boseong Kim presenting an AI-PDR paper at the podium during the 2025 IPNT Conference in Jeju.",
+    "links": [
+      {
+        "label": "View proceedings",
+        "url": "https://ipnt.or.kr/2025proc/35?sfl=wr_name&stx=%EA%B9%80%EB%B3%B4%EC%84%B1&sop=and"
+      }
+    ]
+  },
+  {
+    "id": "2026-09-jpnt-wifi-radio-map",
+    "date": "2026-09-15",
+    "category": "Publication",
+    "title": "New KCI paper on multi-band Wi-Fi radio map construction",
+    "summary": "Our work on a high-speed multi-band Wi-Fi collector and radio map construction pipeline was published in the Journal of Positioning, Navigation, and Timing.",
+    "content": "The paper presents a system that collects 2.4 GHz and 5 GHz Wi-Fi RSSI measurements in parallel and connects the measurements to a PDR-based radio map construction pipeline.",
+    "image": "",
+    "imageAlt": "",
+    "links": [
+      {
+        "label": "View paper",
+        "url": "https://doi.org/10.11003/JPNT.2026.15.3.437"
+      }
+    ]
+  },
+  {
+    "id": "2026-09-jpnt-mobile-robot-radio-map",
+    "date": "2026-09-15",
+    "category": "Publication",
+    "title": "New KCI paper on autonomous radio map construction",
+    "summary": "Our study on autonomous exploration-based radio map construction using a mobile robot was published in the Journal of Positioning, Navigation, and Timing.",
+    "content": "The study uses frontier-based autonomous exploration, SLAM, BLE RSSI collection, and waypoint navigation to reduce the manual effort required to build indoor positioning radio maps.",
+    "image": "",
+    "imageAlt": "",
+    "links": [
+      {
+        "label": "View paper",
+        "url": "https://doi.org/10.11003/JPNT.2026.15.3.381"
+      }
+    ]
+  }
+]

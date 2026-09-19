@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Write News | Boseong Kim</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <meta name="color-scheme" content="dark light">
+  <link rel="stylesheet" href="styles.css">
+  <script src="theme.js" defer></script>
+  <script src="new.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <nav class="site-nav" aria-label="Primary navigation">
+    <a href="index.html">CV</a>
+    <a href="news.html">News</a>
+  </nav>
+
+  <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light mode" title="Switch color theme">
+    <span class="theme-toggle-icon" aria-hidden="true">
+      <img class="theme-icon theme-icon-sun" src="assets/icons/sun.svg" alt="">
+      <img class="theme-icon theme-icon-moon" src="assets/icons/moon.svg" alt="">
+    </span>
+    <span class="theme-toggle-label">Light</span>
+  </button>
+
+  <main id="main-content" class="editor-page">
+    <header class="editor-header">
+      <p class="eyebrow">News Editor</p>
+      <h1>Write a new post</h1>
+      <p>Add text and an optional photo, then save the post directly to your local website folder.</p>
+    </header>
+
+    <div class="editor-grid">
+      <form class="post-form" id="post-form">
+        <div class="field-row">
+          <label>
+            <span>Date</span>
+            <input id="post-date" name="date" type="date" required>
+          </label>
+          <label>
+            <span>Category</span>
+            <select id="post-category" name="category">
+              <option>Publication</option>
+              <option>Project</option>
+              <option>Award</option>
+              <option>Conference</option>
+              <option>Lab Life</option>
+              <option>Update</option>
+            </select>
+          </label>
+        </div>
+
+        <label>
+          <span>Title</span>
+          <input id="post-title" name="title" type="text" maxlength="140" placeholder="What happened?" required>
+        </label>
+
+        <label>
+          <span>Short summary</span>
+          <textarea id="post-summary" name="summary" rows="3" maxlength="320" placeholder="A short introduction shown at the top of the post." required></textarea>
+        </label>
+
+        <label>
+          <span>Content</span>
+          <textarea id="post-content" name="content" rows="8" placeholder="Write the details here. Separate paragraphs with a blank line."></textarea>
+        </label>
+
+        <div class="field-row">
+          <label>
+            <span>Link label <small>(optional)</small></span>
+            <input id="post-link-label" name="linkLabel" type="text" placeholder="View paper">
+          </label>
+          <label>
+            <span>Link URL <small>(optional)</small></span>
+            <input id="post-link-url" name="linkUrl" type="url" placeholder="https://doi.org/…">
+          </label>
+        </div>
+
+        <label class="photo-field">
+          <span>Photo <small>(optional, JPG/PNG/WebP)</small></span>
+          <input id="post-image" name="image" type="file" accept="image/jpeg,image/png,image/webp,image/gif">
+        </label>
+
+        <label id="alt-field" hidden>
+          <span>Photo description</span>
+          <input id="post-image-alt" name="imageAlt" type="text" placeholder="Describe the photo for accessibility">
+        </label>
+
+        <div class="editor-actions">
+          <button class="primary-button" type="submit">Save to website folder</button>
+          <button class="secondary-button" id="download-button" type="button">Download files</button>
+        </div>
+        <p class="editor-status" id="editor-status" role="status"></p>
+      </form>
+
+      <aside class="editor-preview" aria-labelledby="preview-title">
+        <div class="preview-label" id="preview-title">Live preview</div>
+        <article class="news-card preview-card">
+          <figure class="news-card-media" id="preview-media" hidden>
+            <img id="preview-image" src="" alt="">
+          </figure>
+          <div class="news-card-content">
+            <div class="news-card-meta">
+              <span class="news-category" id="preview-category">Publication</span>
+              <time id="preview-date"></time>
+            </div>
+            <h2 id="preview-heading">Your post title</h2>
+            <p class="news-summary" id="preview-summary">Your short summary will appear here.</p>
+            <div class="news-body" id="preview-body"></div>
+            <div class="news-links" id="preview-links"></div>
+          </div>
+        </article>
+      </aside>
+    </div>
+
+    <section class="editor-help">
+      <h2>How publishing works</h2>
+      <ol>
+        <li>Complete the form and choose a photo if needed.</li>
+        <li>Select <strong>Save to website folder</strong>, then choose the local folder containing this website.</li>
+        <li>Commit and push the changed files to GitHub. The new post will then appear on the News page.</li>
+      </ol>
+      <p>The browser never receives your GitHub password. Folder access is requested only when you press the save button.</p>
+    </section>
+  </main>
+</body>
+</html>

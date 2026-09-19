@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>News | Boseong Kim</title>
+  <meta name="description" content="Research news, publications, projects, and activities from Boseong Kim.">
+  <link rel="canonical" href="https://gitboseong.github.io/news.html">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <meta name="color-scheme" content="dark light">
+  <link rel="stylesheet" href="styles.css">
+  <script src="theme.js" defer></script>
+  <script src="news.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <nav class="site-nav" aria-label="Primary navigation">
+    <a href="index.html">CV</a>
+    <a class="active" href="news.html" aria-current="page">News</a>
+  </nav>
+
+  <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light mode" title="Switch color theme">
+    <span class="theme-toggle-icon" aria-hidden="true">
+      <img class="theme-icon theme-icon-sun" src="assets/icons/sun.svg" alt="">
+      <img class="theme-icon theme-icon-moon" src="assets/icons/moon.svg" alt="">
+    </span>
+    <span class="theme-toggle-label">Light</span>
+  </button>
+
+  <main id="main-content" class="news-page">
+    <header class="news-hero">
+      <div>
+        <p class="eyebrow">Updates &amp; Activities</p>
+        <h1>News</h1>
+        <p>Research publications, project milestones, awards, and lab activities.</p>
+      </div>
+      <a class="write-link" href="new.html">Write a post <span aria-hidden="true">→</span></a>
+    </header>
+
+    <section aria-labelledby="latest-news-title">
+      <div class="section-heading">
+        <h2 id="latest-news-title">Latest</h2>
+      </div>
+      <div class="news-list" id="news-list" aria-live="polite">
+        <p class="news-loading">Loading news…</p>
+      </div>
+      <noscript>
+        <p class="news-empty">JavaScript is required to display the news feed.</p>
+      </noscript>
+    </section>
+
+    <footer class="page-footer">
+      © <span id="year"></span> Boseong Kim · Hosted on GitHub Pages
+    </footer>
+  </main>
+
+  <template id="news-card-template">
+    <article class="news-card">
+      <figure class="news-card-media" hidden>
+        <img src="" alt="">
+      </figure>
+      <div class="news-card-content">
+        <div class="news-card-meta">
+          <span class="news-category"></span>
+          <time></time>
+        </div>
+        <h2></h2>
+        <p class="news-summary"></p>
+        <div class="news-body"></div>
+        <div class="news-links"></div>
+      </div>
+    </article>
+  </template>
+</body>
+</html>
