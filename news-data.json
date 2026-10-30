@@ -1,5 +1,21 @@
 [
   {
+    "id": "2026-10-26-ieee-sensors-pdr-accepted",
+    "date": "2026-10-26",
+    "category": "Publication",
+    "title": "Paper accepted in IEEE Sensors Journal",
+    "summary": "Our paper, “A Multi-Carrying-Mode End-to-End Deep Learning Framework for PDR,” has been accepted for publication in IEEE Sensors Journal.",
+    "content": "The paper, co-authored with Beomju Shin, presents an end-to-end deep learning framework for pedestrian dead reckoning across multiple carrying modes.\n\nThe article is currently in production with IEEE Publishing Operations and is awaiting publication in IEEE Xplore.",
+    "image": "",
+    "imageAlt": "",
+    "links": [
+      {
+        "label": "DOI: 10.1109/JSEN.2026.3748182",
+        "url": "https://doi.org/10.1109/JSEN.2026.3748182"
+      }
+    ]
+  },
+  {
     "id": "2025-06-05-silver-prize-at-the-2025-hallym-university-sw-capstone-d",
     "date": "2025-06-05",
     "category": "Award",

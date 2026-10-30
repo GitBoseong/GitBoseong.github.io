@@ -658,6 +658,12 @@ html[data-theme="light"] .theme-icon-moon {
   color: var(--review-text);
 }
 
+.status-accepted {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
 .publication-list-compact .publication-item {
   padding-block: 15px;
 }
