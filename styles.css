@@ -188,6 +188,54 @@ img {
   color: var(--accent);
 }
 
+.site-controls {
+  position: fixed;
+  top: 18px;
+  right: 20px;
+  z-index: 90;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.site-controls .theme-toggle {
+  position: static;
+}
+
+.language-toggle {
+  min-height: 40px;
+  padding: 7px 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--toggle-bg);
+  color: var(--text);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  font: inherit;
+  font-size: 12.5px;
+  font-weight: 750;
+  cursor: pointer;
+}
+
+.language-toggle:hover {
+  border-color: var(--line-strong);
+  background: var(--surface-raised);
+}
+
+.language-toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+html[lang="ko"] .page-header,
+html[lang="ko"] .publication-title,
+html[lang="ko"] .award-item,
+html[lang="ko"] .news-card-content {
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+
 .theme-toggle:hover {
   border-color: var(--line-strong);
   background: var(--surface-raised);
@@ -1257,6 +1305,20 @@ html[data-theme="light"] .theme-icon-moon {
     left: 12px;
   }
 
+  .site-controls {
+    top: 12px;
+    right: 12px;
+    gap: 6px;
+  }
+
+  .site-controls .theme-toggle {
+    padding: 6px;
+  }
+
+  .site-controls .theme-toggle-label {
+    display: none;
+  }
+
   .sidebar,
   .main-content {
     border-radius: 14px;
@@ -1428,7 +1490,8 @@ html[data-theme="light"] .theme-icon-moon {
     display: none;
   }
 
-  .site-nav {
+  .site-nav,
+  .site-controls {
     display: none;
   }
 

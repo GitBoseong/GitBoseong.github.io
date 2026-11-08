@@ -17,15 +17,28 @@
         "label": "상장 보기",
         "url": "images/news/2026-11-06-ipnt-best-paper-certificate.jpg"
       }
-    ]
+    ],
+    "lang": "ko",
+    "translations": {
+      "en": {
+        "title": "Oral presentation and Best Paper Award at the 2026 IPNT Conference",
+        "summary": "I gave an oral presentation of my first-author paper at the 2026 IPNT Conference and received the Best Paper Award.",
+        "content": "On November 6, 2026, I presented “Walking Distance and Heading Change Estimation Using a Single Deep Learning Model for Multi-User and Multi-Carrying-Mode Smartphone PDR” in the Smart Devices session (C7-2) at the IPNT Conference, held at Lotte Hotel Jeju.\n\nCo-authored by Boseong Kim (first author), Jaemun Hwang, and Beomju Shin, the paper received the Best Paper Award from the Institute of Positioning, Navigation, and Timing on the same day.",
+        "imageAlt": "2026 IPNT Best Paper Award ceremony",
+        "linkLabels": [
+          "Proceedings",
+          "View certificate"
+        ]
+      }
+    }
   },
   {
     "id": "2026-10-26-ieee-sensors-pdr-accepted",
     "date": "2026-10-26",
     "category": "Publication",
-    "title": "Paper accepted in IEEE Sensors Journal",
-    "summary": "Our paper, “A Multi-Carrying-Mode End-to-End Deep Learning Framework for PDR,” has been accepted for publication in IEEE Sensors Journal.",
-    "content": "The paper, co-authored with Beomju Shin, presents an end-to-end deep learning framework for pedestrian dead reckoning across multiple carrying modes.\n\nThe article is currently in production with IEEE Publishing Operations and is awaiting publication in IEEE Xplore.",
+    "title": "IEEE Sensors Journal 논문 게재 승인",
+    "summary": "‘A Multi-Carrying-Mode End-to-End Deep Learning Framework for PDR’ 논문이 IEEE Sensors Journal에 게재 승인되었습니다.",
+    "content": "신범주 교수님과 공동 저술한 이 논문은 다양한 스마트폰 파지 환경에서 보행자추측항법(PDR)을 수행하는 종단간 딥러닝 프레임워크를 제안합니다.\n\n현재 IEEE 출판 부서에서 제작 중이며, IEEE Xplore 공개를 기다리고 있습니다.",
     "image": "",
     "imageAlt": "",
     "links": [
@@ -33,18 +46,40 @@
         "label": "DOI: 10.1109/JSEN.2026.3748182",
         "url": "https://doi.org/10.1109/JSEN.2026.3748182"
       }
-    ]
+    ],
+    "lang": "ko",
+    "translations": {
+      "en": {
+        "title": "Paper accepted in IEEE Sensors Journal",
+        "summary": "Our paper, “A Multi-Carrying-Mode End-to-End Deep Learning Framework for PDR,” has been accepted for publication in IEEE Sensors Journal.",
+        "content": "The paper, co-authored with Beomju Shin, presents an end-to-end deep learning framework for pedestrian dead reckoning across multiple carrying modes.\n\nThe article is currently in production with IEEE Publishing Operations and is awaiting publication in IEEE Xplore.",
+        "imageAlt": "",
+        "linkLabels": [
+          "DOI: 10.1109/JSEN.2026.3748182"
+        ]
+      }
+    }
   },
   {
     "id": "2025-06-05-silver-prize-at-the-2025-hallym-university-sw-capstone-d",
     "date": "2025-06-05",
     "category": "Award",
-    "title": "Silver Prize at the 2025 Hallym University SW Capstone Design Competition",
-    "summary": "Received the Silver Prize at the 2025 Spring Semester SW Capstone Design Competition at Hallym University.",
-    "content": "I received the Silver Prize at the 2025 Spring Semester SW Capstone Design Competition held at Hallym University on June 5, 2025. It was a great opportunity to present our project and receive recognition for our work.",
+    "title": "2025 한림대학교 SW 캡스톤디자인 경진대회 은상 수상",
+    "summary": "한림대학교 2025학년도 1학기 SW 캡스톤디자인 경진대회에서 은상을 수상했습니다.",
+    "content": "2025년 6월 5일 한림대학교에서 열린 1학기 SW 캡스톤디자인 경진대회에서 은상을 받았습니다. 프로젝트를 발표하고 그 성과를 인정받을 수 있었던 뜻깊은 자리였습니다.",
     "image": "images/news/2025-06-05-silver-prize-at-the-2025-hallym-university-sw-capstone-d.jpg",
-    "imageAlt": "Boseong Kim holding the Silver Prize certificate and award board at the 2025 Hallym University SW Capstone Design Competition.",
-    "links": []
+    "imageAlt": "2025 한림대학교 SW 캡스톤디자인 경진대회 시상식",
+    "links": [],
+    "lang": "ko",
+    "translations": {
+      "en": {
+        "title": "Silver Prize at the 2025 Hallym University SW Capstone Design Competition",
+        "summary": "Received the Silver Prize at the 2025 Spring Semester SW Capstone Design Competition at Hallym University.",
+        "content": "I received the Silver Prize at the 2025 Spring Semester SW Capstone Design Competition held at Hallym University on June 5, 2025. It was a great opportunity to present our project and receive recognition for our work.",
+        "imageAlt": "2025 Hallym University SW Capstone Design Competition award ceremony",
+        "linkLabels": []
+      }
+    }
   },
   {
     "id": "2025-11-07-ipnt-conference-presentation",
@@ -54,44 +89,80 @@
     "summary": "2025년 11월 7일, 제주에서 열린 항법시스템학회 정기학술대회에서 LSTM 기반 AI-PDR 연구를 구두 발표했습니다.",
     "content": "학부생 논문경진대회 세션(E6-1)에서 ‘LSTM 기반 스마트폰 IMU를 활용한 AI-PDR 시스템 개발’을 발표했습니다. 김보성(제1저자), Shiyi Li, 신범주가 공동 저술한 이 논문은 스마트폰 관성 센서 데이터와 딥러닝을 활용한 보행자추측항법 연구입니다.",
     "image": "images/news/2025-11-07-ipnt-conference-presentation.webp",
-    "imageAlt": "2025년 항법시스템학회 정기학술대회에서 AI-PDR 논문을 구두 발표하는 김보성.",
+    "imageAlt": "2025 IPNT AI-PDR 구두 발표",
     "links": [
       {
         "label": "논문집",
         "url": "https://ipnt.or.kr/2025proc/35"
       }
-    ]
+    ],
+    "lang": "ko",
+    "translations": {
+      "en": {
+        "title": "Oral presentation at the 2025 IPNT Conference",
+        "summary": "On November 7, 2025, I gave an oral presentation on our LSTM-based AI-PDR research at the IPNT Conference in Jeju.",
+        "content": "I presented “Development of an LSTM-Based AI-PDR System Utilizing Smartphone IMU” in the Undergraduate Paper Competition session (E6-1). Co-authored by Boseong Kim (first author), Shiyi Li, and Beomju Shin, the paper explores pedestrian dead reckoning using smartphone inertial sensor data and deep learning.",
+        "imageAlt": "2025 IPNT AI-PDR presentation",
+        "linkLabels": [
+          "Proceedings"
+        ]
+      }
+    }
   },
   {
     "id": "2026-09-jpnt-wifi-radio-map",
     "date": "2026-09-15",
     "category": "Publication",
-    "title": "New KCI paper on multi-band Wi-Fi radio map construction",
-    "summary": "Our work on a high-speed multi-band Wi-Fi collector and radio map construction pipeline was published in the Journal of Positioning, Navigation, and Timing.",
-    "content": "The paper presents a system that collects 2.4 GHz and 5 GHz Wi-Fi RSSI measurements in parallel and connects the measurements to a PDR-based radio map construction pipeline.",
+    "title": "다중대역 Wi-Fi 라디오맵 구축 연구의 KCI 논문 게재",
+    "summary": "다중대역 Wi-Fi 고속 수집기와 라디오맵 구축 파이프라인에 관한 연구가 항법시스템학회의 Journal of Positioning, Navigation, and Timing에 게재되었습니다.",
+    "content": "2.4 GHz와 5 GHz Wi-Fi RSSI를 병렬로 수집하고, 수집한 데이터를 PDR 기반 라디오맵 구축 파이프라인에 연결하는 시스템을 제안한 연구입니다.",
     "image": "",
     "imageAlt": "",
     "links": [
       {
-        "label": "View paper",
+        "label": "논문 보기",
         "url": "https://doi.org/10.11003/JPNT.2026.15.3.437"
       }
-    ]
+    ],
+    "lang": "ko",
+    "translations": {
+      "en": {
+        "title": "New KCI paper on multi-band Wi-Fi radio map construction",
+        "summary": "Our work on a high-speed multi-band Wi-Fi collector and radio map construction pipeline was published in the Journal of Positioning, Navigation, and Timing.",
+        "content": "The paper presents a system that collects 2.4 GHz and 5 GHz Wi-Fi RSSI measurements in parallel and connects the measurements to a PDR-based radio map construction pipeline.",
+        "imageAlt": "",
+        "linkLabels": [
+          "View paper"
+        ]
+      }
+    }
   },
   {
     "id": "2026-09-jpnt-mobile-robot-radio-map",
     "date": "2026-09-15",
     "category": "Publication",
-    "title": "New KCI paper on autonomous radio map construction",
-    "summary": "Our study on autonomous exploration-based radio map construction using a mobile robot was published in the Journal of Positioning, Navigation, and Timing.",
-    "content": "The study uses frontier-based autonomous exploration, SLAM, BLE RSSI collection, and waypoint navigation to reduce the manual effort required to build indoor positioning radio maps.",
+    "title": "자율탐사 기반 라디오맵 구축 연구의 KCI 논문 게재",
+    "summary": "모바일 로봇을 활용한 자율탐사 기반 라디오맵 구축 연구가 항법시스템학회의 Journal of Positioning, Navigation, and Timing에 게재되었습니다.",
+    "content": "프런티어 기반 자율탐사, SLAM, BLE RSSI 수집과 웨이포인트 주행을 활용하여 실내 측위용 라디오맵 구축에 필요한 수작업을 줄이는 연구입니다.",
     "image": "",
     "imageAlt": "",
     "links": [
       {
-        "label": "View paper",
+        "label": "논문 보기",
         "url": "https://doi.org/10.11003/JPNT.2026.15.3.381"
       }
-    ]
+    ],
+    "lang": "ko",
+    "translations": {
+      "en": {
+        "title": "New KCI paper on autonomous radio map construction",
+        "summary": "Our study on autonomous exploration-based radio map construction using a mobile robot was published in the Journal of Positioning, Navigation, and Timing.",
+        "content": "The study uses frontier-based autonomous exploration, SLAM, BLE RSSI collection, and waypoint navigation to reduce the manual effort required to build indoor positioning radio maps.",
+        "imageAlt": "",
+        "linkLabels": [
+          "View paper"
+        ]
+      }
+    }
   }
 ]

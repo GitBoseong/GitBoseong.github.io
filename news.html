@@ -1,57 +1,62 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="ko" data-theme="dark">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>News | Boseong Kim</title>
-  <meta name="description" content="Research news, publications, projects, and activities from Boseong Kim.">
+  <title data-i18n="news.pageTitle">소식 | 김보성</title>
+  <meta name="description" content="김보성의 연구 논문, 프로젝트, 수상 및 연구실 활동 소식입니다." data-i18n-content="news.description">
   <link rel="canonical" href="https://gitboseong.github.io/news.html">
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
   <meta name="color-scheme" content="dark light">
   <link rel="stylesheet" href="styles.css">
+  <script src="translations.js" defer></script>
+  <script src="language.js" defer></script>
   <script src="theme.js" defer></script>
   <script src="news.js" defer></script>
 </head>
 
 <body>
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <a class="skip-link" href="#main-content" data-i18n="ui.skip">본문으로 바로가기</a>
 
-  <nav class="site-nav" aria-label="Primary navigation">
-    <a href="index.html">CV</a>
-    <a class="active" href="news.html" aria-current="page">News</a>
+  <nav class="site-nav" aria-label="주요 메뉴" data-i18n-aria-label="ui.navigation">
+    <a href="index.html" data-i18n="ui.cv">이력</a>
+    <a class="active" href="news.html" aria-current="page" data-i18n="ui.news">소식</a>
   </nav>
 
-  <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to light mode" title="Switch color theme">
-    <span class="theme-toggle-icon" aria-hidden="true">
-      <img class="theme-icon theme-icon-sun" src="assets/icons/sun.svg" alt="">
-      <img class="theme-icon theme-icon-moon" src="assets/icons/moon.svg" alt="">
-    </span>
-    <span class="theme-toggle-label">Light</span>
-  </button>
+  <div class="site-controls">
+    <button class="language-toggle" id="language-toggle" type="button" lang="en" aria-label="Switch to English" hidden>English</button>
+    <button class="theme-toggle" id="theme-toggle" type="button" aria-label="밝은 화면으로 전환" title="화면 테마 전환" data-i18n-title="ui.themeTitle">
+      <span class="theme-toggle-icon" aria-hidden="true">
+        <img class="theme-icon theme-icon-sun" src="assets/icons/sun.svg" alt="">
+        <img class="theme-icon theme-icon-moon" src="assets/icons/moon.svg" alt="">
+      </span>
+      <span class="theme-toggle-label">라이트</span>
+    </button>
+  </div>
 
   <main id="main-content" class="news-page">
     <header class="news-hero">
       <div>
-        <p class="eyebrow">Updates &amp; Activities</p>
-        <h1>News</h1>
-        <p>Research publications, project milestones, awards, and lab activities.</p>
+        <p class="eyebrow" data-i18n="news.eyebrow">연구와 활동</p>
+        <h1 data-i18n="ui.news">소식</h1>
+        <p data-i18n="news.intro">논문 게재, 프로젝트, 수상 및 연구실 활동 소식을 전합니다.</p>
       </div>
     </header>
 
     <section aria-labelledby="latest-news-title">
       <div class="section-heading">
-        <h2 id="latest-news-title">Latest</h2>
+        <h2 id="latest-news-title" data-i18n="news.latest">최근 소식</h2>
       </div>
       <div class="news-list" id="news-list" aria-live="polite">
-        <p class="news-loading">Loading news…</p>
+        <p class="news-loading" data-i18n="news.loading">소식을 불러오는 중…</p>
       </div>
       <noscript>
-        <p class="news-empty">JavaScript is required to display the news feed.</p>
+        <p class="news-empty" data-i18n="news.noScript">소식 목록을 보려면 JavaScript를 활성화해 주세요.</p>
       </noscript>
     </section>
 
     <footer class="page-footer">
-      © <span id="year"></span> Boseong Kim · Hosted on GitHub Pages
+      © <span id="year"></span> <span data-i18n="ui.footer">김보성 · GitHub Pages</span>
     </footer>
   </main>
 

@@ -26,9 +26,14 @@
     if (!toggle || !label) return;
 
     const isDark = theme === "dark";
-    toggle.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
+    const translate = window.siteLanguage?.translate;
+    toggle.setAttribute("aria-label", translate
+      ? translate(isDark ? "theme.toLight" : "theme.toDark")
+      : (isDark ? "Switch to light mode" : "Switch to dark mode"));
     toggle.setAttribute("aria-pressed", String(!isDark));
-    label.textContent = isDark ? "Light" : "Dark";
+    label.textContent = translate
+      ? translate(isDark ? "theme.light" : "theme.dark")
+      : (isDark ? "Light" : "Dark");
   };
 
   const applyTheme = (theme, persist = false) => {
@@ -46,6 +51,8 @@
     const nextTheme = root.dataset.theme === "dark" ? "light" : "dark";
     applyTheme(nextTheme, true);
   });
+
+  document.addEventListener("site-language-change", () => updateToggle(root.dataset.theme));
 
   const year = document.getElementById("year");
   if (year) year.textContent = String(new Date().getFullYear());
