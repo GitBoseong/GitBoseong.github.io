@@ -1,5 +1,25 @@
 [
   {
+    "id": "2026-11-06-ipnt-best-paper-award",
+    "date": "2026-11-06",
+    "category": "Award",
+    "title": "2026 IPNT 구두 발표 및 학술대회 우수논문상 수상",
+    "summary": "2026년 항법시스템학회 정기학술대회에서 제1저자 논문을 구두 발표하고 학술대회 우수논문상을 수상했습니다.",
+    "content": "2026년 11월 6일, 롯데호텔 제주에서 열린 항법시스템학회 정기학술대회의 스마트 디바이스 세션(C7-2)에서 ‘단일 딥러닝 모델 기반 다중 사용자·다중 스마트폰 파지 환경의 PDR 이동 거리 및 방향 추정’을 구두 발표했습니다.\n\n김보성(제1저자), 황재문, 신범주가 공동 저술한 이 논문은 학술대회 우수논문으로 선정되어 같은 날 사단법인 항법시스템학회로부터 학술대회 우수논문상을 받았습니다.",
+    "image": "images/news/2026-11-06-ipnt-best-paper-award.jpg",
+    "imageAlt": "2026년 항법시스템학회 정기학술대회에서 학술대회 우수논문상을 받는 김보성.",
+    "links": [
+      {
+        "label": "논문집",
+        "url": "https://ipnt.or.kr/2026fproc/81"
+      },
+      {
+        "label": "상장 보기",
+        "url": "images/news/2026-11-06-ipnt-best-paper-certificate.jpg"
+      }
+    ]
+  },
+  {
     "id": "2026-10-26-ieee-sensors-pdr-accepted",
     "date": "2026-10-26",
     "category": "Publication",
@@ -30,15 +50,15 @@
     "id": "2025-11-07-ipnt-conference-presentation",
     "date": "2025-11-07",
     "category": "Conference",
-    "title": "Paper presentation at the 2025 IPNT Conference",
-    "summary": "Attended the 2025 IPNT Conference in Jeju from November 5–7 and presented our work on an LSTM-based AI-PDR system.",
-    "content": "I presented “Development of an LSTM-Based AI-PDR System Utilizing Smartphone IMU,” a study on pedestrian dead reckoning using smartphone inertial sensor data and deep learning.",
+    "title": "2025 IPNT 구두 발표",
+    "summary": "2025년 11월 7일, 제주에서 열린 항법시스템학회 정기학술대회에서 LSTM 기반 AI-PDR 연구를 구두 발표했습니다.",
+    "content": "학부생 논문경진대회 세션(E6-1)에서 ‘LSTM 기반 스마트폰 IMU를 활용한 AI-PDR 시스템 개발’을 발표했습니다. 김보성(제1저자), Shiyi Li, 신범주가 공동 저술한 이 논문은 스마트폰 관성 센서 데이터와 딥러닝을 활용한 보행자추측항법 연구입니다.",
     "image": "images/news/2025-11-07-ipnt-conference-presentation.webp",
-    "imageAlt": "Boseong Kim presenting an AI-PDR paper at the podium during the 2025 IPNT Conference in Jeju.",
+    "imageAlt": "2025년 항법시스템학회 정기학술대회에서 AI-PDR 논문을 구두 발표하는 김보성.",
     "links": [
       {
-        "label": "View proceedings",
-        "url": "https://ipnt.or.kr/2025proc/35?sfl=wr_name&stx=%EA%B9%80%EB%B3%B4%EC%84%B1&sop=and"
+        "label": "논문집",
+        "url": "https://ipnt.or.kr/2025proc/35"
       }
     ]
   },

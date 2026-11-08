@@ -652,7 +652,8 @@ html[data-theme="light"] .theme-icon-moon {
   text-transform: uppercase;
 }
 
-.status-review {
+.status-review,
+.status-award {
   border-color: var(--review-line);
   background: var(--review-bg);
   color: var(--review-text);
@@ -668,6 +669,58 @@ html[data-theme="light"] .theme-icon-moon {
   padding-block: 15px;
 }
 
+.conference-archive {
+  margin-top: 12px;
+}
+
+.conference-archive > summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--surface-soft);
+  color: var(--text-soft);
+  font-size: 13px;
+  font-weight: 650;
+  cursor: pointer;
+  list-style: none;
+}
+
+.conference-archive > summary::-webkit-details-marker {
+  display: none;
+}
+
+.conference-archive > summary:hover {
+  border-color: var(--line-strong);
+  color: var(--text);
+}
+
+.conference-archive > summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+.conference-archive-action {
+  flex-shrink: 0;
+  color: var(--accent);
+}
+
+.conference-archive .archive-collapse,
+.conference-archive[open] .archive-expand {
+  display: none;
+}
+
+.conference-archive[open] .archive-collapse {
+  display: inline;
+}
+
+.conference-archive > .publication-list {
+  margin-top: 10px;
+}
+
 .award-item {
   display: grid;
   grid-template-columns: 72px minmax(0, 1fr);
@@ -681,6 +734,10 @@ html[data-theme="light"] .theme-icon-moon {
 .award-year {
   color: var(--accent);
   font-weight: 850;
+}
+
+.award-item + .award-item {
+  margin-top: 12px;
 }
 
 .award-item h3 {
